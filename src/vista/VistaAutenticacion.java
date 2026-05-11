@@ -4,7 +4,11 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -43,8 +47,8 @@ public class VistaAutenticacion extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
+        jpfContraseña = new javax.swing.JPasswordField();
+        txtUsuario = new javax.swing.JTextField();
         lblLogo = new javax.swing.JLabel();
         btnEntrar = new javax.swing.JButton();
 
@@ -55,7 +59,7 @@ public class VistaAutenticacion extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setText("Login");
+        lblTitulo.setText("GanaDex");
 
         panelLinea.setBackground(new java.awt.Color(245, 245, 245));
         panelLinea.setPreferredSize(new java.awt.Dimension(0, 4));
@@ -125,7 +129,7 @@ public class VistaAutenticacion extends javax.swing.JFrame {
                 .addComponent(btnIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78)
                 .addComponent(btnCrearCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 353, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 338, Short.MAX_VALUE)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(94, 94, 94))
         );
@@ -149,15 +153,15 @@ public class VistaAutenticacion extends javax.swing.JFrame {
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
-        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
-        jPasswordField1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jPasswordField1.setText("jPasswordField1");
-        jPasswordField1.setBorder(null);
+        jpfContraseña.setBackground(new java.awt.Color(255, 255, 255));
+        jpfContraseña.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jpfContraseña.setText("jPasswordField1");
+        jpfContraseña.setBorder(null);
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField1.setText("Ingrese su nombre de usuario");
-        jTextField1.setBorder(null);
+        txtUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtUsuario.setText("Ingrese su nombre de usuario");
+        txtUsuario.setBorder(null);
 
         lblLogo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblLogo.setForeground(new java.awt.Color(0, 0, 0));
@@ -182,8 +186,8 @@ public class VistaAutenticacion extends javax.swing.JFrame {
                         .addComponent(jSeparator1)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jSeparator2)
-                        .addComponent(jPasswordField1)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE))
+                        .addComponent(jpfContraseña)
+                        .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE))
                     .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(516, Short.MAX_VALUE))
@@ -198,13 +202,13 @@ public class VistaAutenticacion extends javax.swing.JFrame {
                 .addGap(70, 70, 70)
                 .addComponent(lblUsuario)
                 .addGap(30, 30, 30)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60)
                 .addComponent(jLabel2)
                 .addGap(30, 30, 30)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100)
@@ -276,6 +280,18 @@ public class VistaAutenticacion extends javax.swing.JFrame {
     public JPanel getPanelIniciarSesion() {
         return panelIniciarSesion;
     }
+
+    public JButton getBtnCrearCuenta() {
+        return btnCrearCuenta;
+    }
+
+    public String getJpfContraseña() {
+        return String.valueOf(jpfContraseña.getPassword());
+    }
+
+    public String getTxtUsuario() {
+        return String.valueOf(txtUsuario);
+    }
     
     
 
@@ -286,10 +302,9 @@ public class VistaAutenticacion extends javax.swing.JFrame {
     private javax.swing.JButton btnIniciarSesion;
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField jpfContraseña;
     private javax.swing.JLabel lblIniciarSesion;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblTitulo;
@@ -297,5 +312,6 @@ public class VistaAutenticacion extends javax.swing.JFrame {
     private javax.swing.JPanel panelIniciarSesion;
     private javax.swing.JPanel panelLinea;
     private javax.swing.JPanel sideBar;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

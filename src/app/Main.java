@@ -5,6 +5,7 @@ package app;
 import com.formdev.flatlaf.intellijthemes.FlatGradiantoDeepOceanIJTheme;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
+import javax.swing.plaf.basic.BasicComboBoxUI;
 import vista.PanelCrearCuenta;
 import vista.VistaAutenticacion;
 import vista.VistaPrincipal;
@@ -23,11 +24,12 @@ public class Main {
         
         PanelCrearCuenta panel = new PanelCrearCuenta();
         
-        panel.setSize(896,1128);
+        panel.setSize(881,1128);
         panel.setLocation(0,0);
                 
         vista.getPanelIniciarSesion().removeAll();
         vista.getPanelIniciarSesion().add(panel,BorderLayout.CENTER);
+        
         vista.revalidate();
         vista.repaint();
         
