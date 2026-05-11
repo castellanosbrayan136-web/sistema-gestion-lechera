@@ -46,10 +46,31 @@ public class BovinoDAO {
             Type tipoLista = new TypeToken<List<Bovino>>(){}.getType();
             List<Bovino> lista = gson.fromJson(reader, tipoLista);
             
-            return (lista != null) ? lista : new ArrayList<Bovino>();
+            return (lista != null) ? lista : new ArrayList<>();
         } catch (IOException ex) {
             return new ArrayList<>();
         }
     }
     
+    private String generarCodigoInterno() {
+        int codigoCorrespondiente = ganado.size() + 1;
+        
+        if (codigoCorrespondiente < 10) {
+            return "00" + String.valueOf(codigoCorrespondiente);
+        } else if (codigoCorrespondiente < 100) {
+            return "0" + String.valueOf(codigoCorrespondiente);
+        } else {
+            return String.valueOf(codigoCorrespondiente);
+        }
+    }
+    
+    public boolean registrar(Bovino bovino) {
+        if (bovino == null) {
+            return false;
+        }
+        bovino.setCodigoInterno(generarCodigoInterno());
+        ganado.add(bovino);
+        
+        return true;
+    }
 }
