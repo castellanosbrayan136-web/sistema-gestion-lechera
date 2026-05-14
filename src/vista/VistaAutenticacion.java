@@ -5,10 +5,7 @@
 package vista;
 
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
 
 /**
  *
@@ -41,16 +38,7 @@ public class VistaAutenticacion extends javax.swing.JFrame {
         btnIniciarSesion = new javax.swing.JButton();
         btnCrearCuenta = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        panelIniciarSesion = new javax.swing.JPanel();
-        lblIniciarSesion = new javax.swing.JLabel();
-        lblUsuario = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
-        jpfContraseña = new javax.swing.JPasswordField();
-        txtUsuario = new javax.swing.JTextField();
-        lblLogo = new javax.swing.JLabel();
-        btnEntrar = new javax.swing.JButton();
+        panelIntercambiable = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -134,86 +122,18 @@ public class VistaAutenticacion extends javax.swing.JFrame {
                 .addGap(94, 94, 94))
         );
 
-        panelIniciarSesion.setBackground(new java.awt.Color(255, 255, 255));
-        panelIniciarSesion.setForeground(new java.awt.Color(245, 255, 255));
+        panelIntercambiable.setBackground(new java.awt.Color(255, 255, 255));
+        panelIntercambiable.setForeground(new java.awt.Color(245, 255, 255));
 
-        lblIniciarSesion.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        lblIniciarSesion.setForeground(new java.awt.Color(0, 0, 0));
-        lblIniciarSesion.setText("INICIAR SESIÓN");
-
-        lblUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblUsuario.setForeground(new java.awt.Color(0, 0, 0));
-        lblUsuario.setText("USUARIO");
-
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("CONTRASEÑA");
-
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-
-        jpfContraseña.setBackground(new java.awt.Color(255, 255, 255));
-        jpfContraseña.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jpfContraseña.setText("jPasswordField1");
-        jpfContraseña.setBorder(null);
-
-        txtUsuario.setBackground(new java.awt.Color(255, 255, 255));
-        txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtUsuario.setText("Ingrese su nombre de usuario");
-        txtUsuario.setBorder(null);
-
-        lblLogo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblLogo.setForeground(new java.awt.Color(0, 0, 0));
-        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/silhouette-black-cow-head-logo-design-graphic-symbol-icon-illustration-creative-idea-vector (1).jpg"))); // NOI18N
-        lblLogo.setText("MilkSys");
-
-        btnEntrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnEntrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnEntrar.setText("ENTRAR");
-        btnEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout panelIniciarSesionLayout = new javax.swing.GroupLayout(panelIniciarSesion);
-        panelIniciarSesion.setLayout(panelIniciarSesionLayout);
-        panelIniciarSesionLayout.setHorizontalGroup(
-            panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIniciarSesionLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(lblIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jSeparator1)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jSeparator2)
-                        .addComponent(jpfContraseña)
-                        .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE))
-                    .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(516, Short.MAX_VALUE))
+        javax.swing.GroupLayout panelIntercambiableLayout = new javax.swing.GroupLayout(panelIntercambiable);
+        panelIntercambiable.setLayout(panelIntercambiableLayout);
+        panelIntercambiableLayout.setHorizontalGroup(
+            panelIntercambiableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1128, Short.MAX_VALUE)
         );
-        panelIniciarSesionLayout.setVerticalGroup(
-            panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIniciarSesionLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(lblIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addComponent(lblUsuario)
-                .addGap(30, 30, 30)
-                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(jLabel2)
-                .addGap(30, 30, 30)
-                .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        panelIntercambiableLayout.setVerticalGroup(
+            panelIntercambiableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
@@ -223,7 +143,7 @@ public class VistaAutenticacion extends javax.swing.JFrame {
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(sideBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelIniciarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelIntercambiable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         backgroundLayout.setVerticalGroup(
@@ -231,7 +151,7 @@ public class VistaAutenticacion extends javax.swing.JFrame {
             .addComponent(sideBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelIniciarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelIntercambiable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -276,42 +196,32 @@ public class VistaAutenticacion extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new VistaAutenticacion().setVisible(true));
     }
-
-    public JPanel getPanelIniciarSesion() {
-        return panelIniciarSesion;
+    
+    public JButton getBtnIniciarSesion() {
+        return btnIniciarSesion;
     }
-
     public JButton getBtnCrearCuenta() {
         return btnCrearCuenta;
     }
 
-    public String getJpfContraseña() {
-        return String.valueOf(jpfContraseña.getPassword());
+    public JButton getBtnSalir() {
+        return btnSalir;
     }
 
-    public String getTxtUsuario() {
-        return String.valueOf(txtUsuario);
+    public JPanel getPanelIntercambiable() {
+        return panelIntercambiable;
     }
     
     
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JButton btnCrearCuenta;
-    private javax.swing.JButton btnEntrar;
     private javax.swing.JButton btnIniciarSesion;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JPasswordField jpfContraseña;
-    private javax.swing.JLabel lblIniciarSesion;
-    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblTitulo;
-    private javax.swing.JLabel lblUsuario;
-    private javax.swing.JPanel panelIniciarSesion;
+    private javax.swing.JPanel panelIntercambiable;
     private javax.swing.JPanel panelLinea;
     private javax.swing.JPanel sideBar;
-    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

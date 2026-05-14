@@ -7,25 +7,28 @@ import java.time.LocalDate;
 
 public class Bovino {
     private String codigoInterno;
-    private String nombre;
-    private LocalDate fechaNacimiento;
-    private String razaPadre;
-    private String razaMadre;
-    private String sexo;
-    private String estadoProduccion;
+    private final String nombre;
+    private final LocalDate fechaNacimiento;
+    private final String razaPadre;
+    private final String razaMadre;
+    private final String sexo;
+    private String estado;
+    private String descripcion;
     private String numeroIdentificador;
     private Double peso;
 
-    public Bovino(String codigoInterno, String nombre, LocalDate fechaNacimiento, String razaPadre, String razaMadre, String sexo, String estadoProduccion, String numeroIdentificador, Double peso) {
-        this.codigoInterno = codigoInterno;
+    public Bovino(String nombre, LocalDate fechaNacimiento, String razaPadre, String razaMadre, String sexo, String estado,String descripcion, String numeroIdentificador, Double peso) {
+        this.codigoInterno = "0";
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.razaPadre = razaPadre;
         this.razaMadre = razaMadre;
         this.sexo = sexo;
-        this.estadoProduccion = estadoProduccion;
+        this.estado = estado;
+        this.descripcion = descripcion;
         this.numeroIdentificador = numeroIdentificador;
         this.peso = peso;
+        
     }
 
     public String getCodigoInterno() {
@@ -52,8 +55,12 @@ public class Bovino {
         return sexo;
     }
 
-    public String getEstadoProduccion() {
-        return estadoProduccion;
+    public String getEstado() {
+        return estado;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
     }
 
     public String getNumeroIdentificador() {
@@ -63,4 +70,10 @@ public class Bovino {
     public Double getPeso() {
         return peso;
     }
+
+    public void setCodigoInterno(String codigoInterno) {
+        this.codigoInterno = codigoInterno;
+    }
+    
+    
 }

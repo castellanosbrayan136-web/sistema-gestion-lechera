@@ -17,14 +17,17 @@ import java.util.List;
 
 
 public class BovinoDAO {
-    private Gson gson;
+    private final Gson gson;
     private final String ruta;
-    private List<Bovino> ganado;
+    private final List<Bovino> ganado;
+    private static final List<Bovino> hembras = new ArrayList<>();
+    private static final List<Bovino> machos = new ArrayList<>();
 
-    public BovinoDAO(List<Bovino> ganado) {
+    public BovinoDAO() {
         this.gson = new GsonBuilder().setPrettyPrinting().create();
         this.ruta = "ganado.json";
         this.ganado = cargarDatos();
+        cargarListasMachosYHembras();
     }
     
     private void guardarDatos() {
@@ -68,9 +71,48 @@ public class BovinoDAO {
         if (bovino == null) {
             return false;
         }
-        bovino.setCodigoInterno(generarCodigoInterno());
-        ganado.add(bovino);
         
-        return true;
+        bovino.setCodigoInterno(generarCodigoInterno());
+        
+        if(verificarSexo(bovino)) {
+            ganado.add(bovino);
+            machos.add(bovino);
+            guardarDatos();
+            return true;
+        } else {
+            ganado.add(bovino);
+            hembras.add(bovino);
+            guardarDatos();
+            return true;
+        }
+    }
+    
+    private void cargarListasMachosYHembras() {
+        machos.clear();
+        hembras.clear();
+        
+        for (Bovino bovino: ganado) {
+            if (verificarSexo(bovino)) {
+                machos.add(bovino);
+            } else {
+                hembras.add(bovino);
+            }
+        }
+    }
+    
+    private boolean verificarSexo(Bovino bovino) {
+        return bovino.getSexo().equals("macho");
+    }
+    
+    public List<Bovino> retornarGanado() {
+        return ganado;
+    }
+    
+    public List<Bovino> retornarMachos() {
+        return machos;
+    }
+    
+    public List<Bovino> retornarHembras() {
+        return hembras;
     }
 }

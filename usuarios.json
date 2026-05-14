@@ -1,0 +1,14 @@
+[
+  {
+    "nombresYApellidos": "Brayan Stiven Castellanos Diaz",
+    "nombreDeUsuario": "Brayan C",
+    "correoElectronico": "castellanosbrayan136@gmail.com",
+    "nombreDeLafinca": "Finca la oyada",
+    "ubicacion": {
+      "departamento": "Santander",
+      "municipio": "Malaga",
+      "vereda": "Buenavista"
+    },
+    "contraseña": "wow123"
+  }
+]

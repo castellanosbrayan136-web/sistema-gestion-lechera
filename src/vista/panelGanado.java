@@ -8,12 +8,12 @@ package vista;
  *
  * @author Brayan C
  */
-public class panelGanado extends javax.swing.JPanel {
+public class PanelGanado extends javax.swing.JPanel {
 
     /**
      * Creates new form panelGanado
      */
-    public panelGanado() {
+    public PanelGanado() {
         initComponents();
     }
 
@@ -59,6 +59,7 @@ public class panelGanado extends javax.swing.JPanel {
         txtNumeroIdentificador = new javax.swing.JTextField();
         jblDatosObligatorios = new javax.swing.JLabel();
         jblDatosOpcionales = new javax.swing.JLabel();
+        txtDescripcion = new javax.swing.JTextField();
 
         background.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -254,8 +255,8 @@ public class panelGanado extends javax.swing.JPanel {
         jcbEstado.setBackground(new java.awt.Color(255, 255, 255));
         jcbEstado.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jcbEstado.setForeground(new java.awt.Color(0, 0, 0));
-        jcbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona el sexo" }));
-        jcbEstado.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Estado de producción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 18), new java.awt.Color(0, 0, 0))); // NOI18N
+        jcbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Produciendo", "Enfermo", "Vendido", "Muerto" }));
+        jcbEstado.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Estado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 18), new java.awt.Color(0, 0, 0))); // NOI18N
 
         jcbRazaPadre.setBackground(new java.awt.Color(255, 255, 255));
         jcbRazaPadre.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -310,6 +311,12 @@ public class panelGanado extends javax.swing.JPanel {
         jblDatosOpcionales.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jblDatosOpcionales.setForeground(new java.awt.Color(0, 0, 0));
         jblDatosOpcionales.setText("Datos opcionales");
+
+        txtDescripcion.setBackground(new java.awt.Color(255, 255, 255));
+        txtDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txtDescripcion.setForeground(new java.awt.Color(153, 153, 153));
+        txtDescripcion.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Descripción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 18), new java.awt.Color(0, 0, 0))); // NOI18N
+        txtDescripcion.setCaretColor(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout panelRegistrarGanadoLayout = new javax.swing.GroupLayout(panelRegistrarGanado);
         panelRegistrarGanado.setLayout(panelRegistrarGanadoLayout);
@@ -372,7 +379,8 @@ public class panelGanado extends javax.swing.JPanel {
                     .addComponent(jblDatosOpcionales, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(txtPeso, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                        .addComponent(txtNumeroIdentificador, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addComponent(txtNumeroIdentificador, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtDescripcion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)))
                 .addGap(38, 38, 38))
             .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
                 .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -401,32 +409,34 @@ public class panelGanado extends javax.swing.JPanel {
                         .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jcbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jblMensajeFecha)
+                        .addGap(18, 18, 18)
+                        .addComponent(jblRazasConforman)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jcbRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jcbRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jcbX, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jblMensajeRazas)
+                        .addGap(18, 18, 18)
+                        .addComponent(jcbSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jblMensajeSexo)
+                        .addGap(18, 18, 18)
+                        .addComponent(jcbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(jblMensajeEstadoProduccion)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblMensajeFecha)
-                .addGap(18, 18, 18)
-                .addComponent(jblRazasConforman)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcbRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jcbRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jcbX, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblMensajeRazas)
-                .addGap(18, 18, 18)
-                .addComponent(jcbSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblMensajeSexo)
-                .addGap(18, 18, 18)
-                .addComponent(jcbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(jblMensajeEstadoProduccion)
-                .addGap(18, 18, 18)
-                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
@@ -493,6 +503,7 @@ public class panelGanado extends javax.swing.JPanel {
     private javax.swing.JPanel panelLinea;
     private javax.swing.JPanel panelRegistrarGanado;
     private javax.swing.JPanel panelSideBar1;
+    private javax.swing.JTextField txtDescripcion;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNumeroIdentificador;
     private javax.swing.JTextField txtPeso;
