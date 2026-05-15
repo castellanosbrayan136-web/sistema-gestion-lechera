@@ -2,26 +2,61 @@ package controlador;
 
 //@autor: Brayan C
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
 import vista.PanelIniciarSesion;
 import vista.ScreenManager;
+import vista.VistaAutenticacion;
 
 
 public class ControladorIniciarSesion implements ActionListener {
     private UsuarioDAO usuarioDAO;
     private PanelIniciarSesion panelIniciarSesion;
+    private VistaAutenticacion vistaAutenticacion;
 
-    public ControladorIniciarSesion(UsuarioDAO usuarioDAO, PanelIniciarSesion panelIniciarSesion) {
+    public ControladorIniciarSesion(UsuarioDAO usuarioDAO, PanelIniciarSesion panelIniciarSesion, VistaAutenticacion vistaAutenticacion) {
         this.usuarioDAO = usuarioDAO;
         this.panelIniciarSesion = panelIniciarSesion;
+        this.vistaAutenticacion = vistaAutenticacion;
+        
         activarEventos();
     }
     
     public void activarEventos() {
         panelIniciarSesion.getBtnEntrar().addActionListener(this);
+        eventoTxtNombreUsurio();
+        eventoTxtContraseña();
+    }
+    
+    public void eventoTxtNombreUsurio() {
+        panelIniciarSesion.getTxtUsuario().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                reiniciarCampos();
+                if (panelIniciarSesion.getUsuario() == null) {
+                    panelIniciarSesion.setTxtUsuario("");
+                    panelIniciarSesion.getTxtUsuario().setForeground(Color.black);
+                }
+            }
+        });
+    }
+    
+    public void eventoTxtContraseña() {
+        panelIniciarSesion.getJpfContraseña().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                reiniciarCampos();
+                if (panelIniciarSesion.getContraseña()== null) {
+                    panelIniciarSesion.setJpfContraseña("");
+                    panelIniciarSesion.getJpfContraseña().setForeground(Color.black);
+                }
+            }
+        });
     }
     
     @Override
@@ -41,11 +76,9 @@ public class ControladorIniciarSesion implements ActionListener {
         Usuario usuario = usuarioDAO.verificarUsuario(nombreUsuario, contraseña);
         
         if (usuario != null) {
-            ScreenManager.abrirVistaPrincipal(usuario);
+            ScreenManager.abrirVistaPrincipal(usuario, vistaAutenticacion);
         }
     }
-    
-    
     
     public String leerNombreUsuario() {
         String usuario = panelIniciarSesion.getUsuario();
@@ -61,5 +94,20 @@ public class ControladorIniciarSesion implements ActionListener {
             panelIniciarSesion.setMensajeContraseña("Ingresa una contraseña");
         }
         return contraseña;
+    }
+    
+    public void reiniciarCampos() {
+        int c = 204;
+        Color grisClaro = new Color(c,c,c);
+        
+        if (panelIniciarSesion.getUsuario() == null) {
+            panelIniciarSesion.setTxtUsuario("Ingrese su nombre de usuario");
+            panelIniciarSesion.getTxtUsuario().setForeground(grisClaro);
+        }
+        
+        if (panelIniciarSesion.getContraseña() == null) {
+            panelIniciarSesion.setJpfContraseña("**************");
+            panelIniciarSesion.getJpfContraseña().setForeground(grisClaro);
+        }
     }
 }

@@ -56,7 +56,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         lblMenorProduccion = new javax.swing.JLabel();
         lblBienvenido = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         bacgraund.setBackground(new java.awt.Color(245, 245, 245));
 

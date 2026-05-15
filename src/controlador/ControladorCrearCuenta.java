@@ -50,6 +50,9 @@ public class ControladorCrearCuenta implements ActionListener {
             @Override
             public void mousePressed(MouseEvent e) {
                 reiniciarCaposDeTexto();
+                if (panelCrearCuenta.getNombres() != null) {
+                    return;
+                }
                 panelCrearCuenta.setTxtNombres("");
                 panelCrearCuenta.getTxtNombres().setForeground(Color.black);
             }
@@ -61,6 +64,9 @@ public class ControladorCrearCuenta implements ActionListener {
             @Override
             public void mousePressed(MouseEvent e) {
                 reiniciarCaposDeTexto();
+                if (panelCrearCuenta.getCorreo ()!= null) {
+                    return;
+                }
                 panelCrearCuenta.setTxtCorreo("");
                 panelCrearCuenta.getTxtCorreo().setForeground(Color.black);
             }
@@ -72,6 +78,9 @@ public class ControladorCrearCuenta implements ActionListener {
             @Override
             public void mousePressed(MouseEvent e) {
                 reiniciarCaposDeTexto();
+                if (panelCrearCuenta.getUsuario() != null) {
+                    return;
+                }
                 panelCrearCuenta.setTxtUsuario("");
                 panelCrearCuenta.getTxtUsuario().setForeground(Color.black);
             }
@@ -83,6 +92,9 @@ public class ControladorCrearCuenta implements ActionListener {
             @Override
             public void mousePressed(MouseEvent e) {
                 reiniciarCaposDeTexto();
+                if (panelCrearCuenta.getContraseña() != null) {
+                    return;
+                }
                 panelCrearCuenta.setJpfContraseña("");
                 panelCrearCuenta.getJpfContraseña().setForeground(Color.black);
             }
@@ -94,6 +106,9 @@ public class ControladorCrearCuenta implements ActionListener {
             @Override
             public void mousePressed(MouseEvent e) {
                 reiniciarCaposDeTexto();
+                if (panelCrearCuenta.getVereda() != null) {
+                    return;
+                }
                 panelCrearCuenta.setTxtVereda("");
                 panelCrearCuenta.getTxtVereda().setForeground(Color.black);
             }
@@ -105,6 +120,9 @@ public class ControladorCrearCuenta implements ActionListener {
             @Override
             public void mousePressed(MouseEvent e) {
                 reiniciarCaposDeTexto();
+                if (panelCrearCuenta.getNombreFinca() != null) {
+                    return;
+                }
                 panelCrearCuenta.setTxtNombreFinca("");
                 panelCrearCuenta.getTxtNombreFinca().setForeground(Color.black);
             }
@@ -187,4 +205,5 @@ public class ControladorCrearCuenta implements ActionListener {
         }
     }
     
+    //Murio aprox 5:10pm - 5:20pm del dia jueves 14 de mayo del año 2025
 }

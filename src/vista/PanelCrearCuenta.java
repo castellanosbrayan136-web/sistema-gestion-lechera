@@ -88,6 +88,7 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         txtNombres.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtNombres.setText("Nombres y apellidos");
         txtNombres.setBorder(null);
+        txtNombres.setCaretColor(new java.awt.Color(0, 0, 0));
 
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,6 +99,7 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtUsuario.setText("Nombre de usuario");
         txtUsuario.setBorder(null);
+        txtUsuario.setCaretColor(new java.awt.Color(0, 0, 0));
 
         jblUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jblUsuario.setForeground(new java.awt.Color(0, 0, 0));
@@ -119,16 +121,19 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         txtCorreo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtCorreo.setText("Correo electrónico");
         txtCorreo.setBorder(null);
+        txtCorreo.setCaretColor(new java.awt.Color(0, 0, 0));
 
         txtNombreFinca.setBackground(new java.awt.Color(255, 255, 255));
         txtNombreFinca.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtNombreFinca.setText("Nombre de la finca");
         txtNombreFinca.setBorder(null);
+        txtNombreFinca.setCaretColor(new java.awt.Color(0, 0, 0));
 
         jpfContraseña.setBackground(new java.awt.Color(255, 255, 255));
         jpfContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jpfContraseña.setText("********");
+        jpfContraseña.setText("**************");
         jpfContraseña.setBorder(null);
+        jpfContraseña.setCaretColor(new java.awt.Color(0, 0, 0));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -155,6 +160,7 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         txtVereda.setForeground(new java.awt.Color(153, 153, 153));
         txtVereda.setText("Vereda");
         txtVereda.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Vereda", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txtVereda.setCaretColor(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
