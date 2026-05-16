@@ -41,7 +41,6 @@ public class PanelGanado extends javax.swing.JPanel {
         txtPeso = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         jblFechaNacimiento = new javax.swing.JLabel();
-        jcbAño = new javax.swing.JComboBox<>();
         jcbMes = new javax.swing.JComboBox<>();
         jcbDia = new javax.swing.JComboBox<>();
         jcbRazaMadre = new javax.swing.JComboBox<>();
@@ -60,14 +59,15 @@ public class PanelGanado extends javax.swing.JPanel {
         jblDatosObligatorios = new javax.swing.JLabel();
         jblDatosOpcionales = new javax.swing.JLabel();
         txtDescripcion = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         background.setBackground(new java.awt.Color(255, 255, 255));
 
-        panelSideBar1.setBackground(new java.awt.Color(27, 37, 55));
+        panelSideBar1.setBackground(new java.awt.Color(35, 52, 78));
         panelSideBar1.setForeground(new java.awt.Color(46, 125, 50));
         panelSideBar1.setPreferredSize(new java.awt.Dimension(270, 892));
 
-        btnFinanzas.setBackground(new java.awt.Color(39, 51, 69));
+        btnFinanzas.setBackground(new java.awt.Color(55, 72, 95));
         btnFinanzas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnFinanzas.setForeground(new java.awt.Color(255, 255, 255));
         btnFinanzas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-precios-32.png"))); // NOI18N
@@ -78,7 +78,7 @@ public class PanelGanado extends javax.swing.JPanel {
         btnFinanzas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnFinanzas.setIconTextGap(15);
 
-        btnClientes.setBackground(new java.awt.Color(39, 51, 69));
+        btnClientes.setBackground(new java.awt.Color(55, 72, 95));
         btnClientes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnClientes.setForeground(new java.awt.Color(255, 255, 255));
         btnClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-toro-32.png"))); // NOI18N
@@ -89,7 +89,7 @@ public class PanelGanado extends javax.swing.JPanel {
         btnClientes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnClientes.setIconTextGap(15);
 
-        btnProduccion.setBackground(new java.awt.Color(39, 51, 69));
+        btnProduccion.setBackground(new java.awt.Color(55, 72, 95));
         btnProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnProduccion.setForeground(new java.awt.Color(255, 255, 255));
         btnProduccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-registro-32 (1).png"))); // NOI18N
@@ -100,7 +100,7 @@ public class PanelGanado extends javax.swing.JPanel {
         btnProduccion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnProduccion.setIconTextGap(15);
 
-        btnRegistrarGanado.setBackground(new java.awt.Color(39, 51, 69));
+        btnRegistrarGanado.setBackground(new java.awt.Color(55, 72, 95));
         btnRegistrarGanado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnRegistrarGanado.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrarGanado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganado-32 (1).png"))); // NOI18N
@@ -132,7 +132,7 @@ public class PanelGanado extends javax.swing.JPanel {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
-        btnHistorialSanitario.setBackground(new java.awt.Color(39, 51, 69));
+        btnHistorialSanitario.setBackground(new java.awt.Color(55, 72, 95));
         btnHistorialSanitario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnHistorialSanitario.setForeground(new java.awt.Color(255, 255, 255));
         btnHistorialSanitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-vacuna-32.png"))); // NOI18N
@@ -143,7 +143,7 @@ public class PanelGanado extends javax.swing.JPanel {
         btnHistorialSanitario.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnHistorialSanitario.setIconTextGap(15);
 
-        btnReportes.setBackground(new java.awt.Color(39, 51, 69));
+        btnReportes.setBackground(new java.awt.Color(55, 72, 95));
         btnReportes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnReportes.setForeground(new java.awt.Color(255, 255, 255));
         btnReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-gráfico-de-barras-32.png"))); // NOI18N
@@ -158,23 +158,17 @@ public class PanelGanado extends javax.swing.JPanel {
         panelSideBar1.setLayout(panelSideBar1Layout);
         panelSideBar1Layout.setHorizontalGroup(
             panelSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnRegistrarGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnHistorialSanitario, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnFinanzas, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(panelSideBar1Layout.createSequentialGroup()
-                .addGroup(panelSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnFinanzas, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(btnProduccion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
-                        .addComponent(btnHistorialSanitario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRegistrarGanado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(btnReportes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
-                        .addComponent(btnClientes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(panelSideBar1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(16, 16, 16)
                 .addGroup(panelSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblTituloSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panelLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTituloSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         panelSideBar1Layout.setVerticalGroup(
             panelSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,7 +177,7 @@ public class PanelGanado extends javax.swing.JPanel {
                 .addComponent(lblTituloSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(panelLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
+                .addGap(63, 63, 63)
                 .addComponent(btnRegistrarGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnHistorialSanitario, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -221,12 +215,6 @@ public class PanelGanado extends javax.swing.JPanel {
         jblFechaNacimiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jblFechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
         jblFechaNacimiento.setText("Fecha de nacimiento");
-
-        jcbAño.setBackground(new java.awt.Color(255, 255, 255));
-        jcbAño.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jcbAño.setForeground(new java.awt.Color(0, 0, 0));
-        jcbAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año", "1990", "2000", "2020", "2025", "2026" }));
-        jcbAño.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Año", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 18), new java.awt.Color(0, 0, 0))); // NOI18N
 
         jcbMes.setBackground(new java.awt.Color(255, 255, 255));
         jcbMes.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -274,8 +262,10 @@ public class PanelGanado extends javax.swing.JPanel {
         jblRazasConforman.setForeground(new java.awt.Color(0, 0, 0));
         jblRazasConforman.setText("Razas que lo conforman");
 
+        btnRegistrar.setBackground(new java.awt.Color(49, 72, 110));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnRegistrar.setText("Registrar");
+        btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistrar.setText("REGISTRAR");
         btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jblMensajeNombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -318,6 +308,9 @@ public class PanelGanado extends javax.swing.JPanel {
         txtDescripcion.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Descripción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 18), new java.awt.Color(0, 0, 0))); // NOI18N
         txtDescripcion.setCaretColor(new java.awt.Color(0, 0, 0));
 
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año" }));
+
         javax.swing.GroupLayout panelRegistrarGanadoLayout = new javax.swing.GroupLayout(panelRegistrarGanado);
         panelRegistrarGanado.setLayout(panelRegistrarGanadoLayout);
         panelRegistrarGanadoLayout.setHorizontalGroup(
@@ -327,14 +320,17 @@ public class PanelGanado extends javax.swing.JPanel {
                     .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jblTituloPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                                .addComponent(jcbAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)
-                                .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)
-                                .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNombre)
+                                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jcbMes, 0, 100, Short.MAX_VALUE)
+                                        .addGap(12, 12, 12)
+                                        .addComponent(jcbDia, 0, 97, Short.MAX_VALUE)))
+                                .addGap(125, 125, 125))))
                     .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jblFechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -343,19 +339,10 @@ public class PanelGanado extends javax.swing.JPanel {
                         .addComponent(jblRazasConforman, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jblMensajeNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(jblMensajeSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jblMensajeEstadoProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jblDatosObligatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelRegistrarGanadoLayout.createSequentialGroup()
                             .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -373,17 +360,30 @@ public class PanelGanado extends javax.swing.JPanel {
                             .addContainerGap()
                             .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jblMensajeRazas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jcbEstado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                                .addComponent(jcbEstado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jblMensajeFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE))
+                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jblMensajeNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jblDatosObligatorios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(125, 125, 125)))
+                .addGap(46, 46, 46)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jblDatosOpcionales, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtPeso, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                        .addComponent(txtNumeroIdentificador, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtDescripcion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)))
+                    .addComponent(jblDatosOpcionales, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
+                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtPeso, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtNumeroIdentificador, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDescripcion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE))
+                        .addGap(56, 56, 56)))
                 .addGap(38, 38, 38))
             .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelRegistrarGanadoLayout.setVerticalGroup(
@@ -407,9 +407,9 @@ public class PanelGanado extends javax.swing.JPanel {
                         .addComponent(jblFechaNacimiento)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jcbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jblMensajeFecha)
                         .addGap(18, 18, 18)
@@ -429,15 +429,15 @@ public class PanelGanado extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(jcbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(1, 1, 1)
-                        .addComponent(jblMensajeEstadoProduccion)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jblMensajeEstadoProduccion))
                     .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)
                         .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
@@ -445,29 +445,31 @@ public class PanelGanado extends javax.swing.JPanel {
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(panelSideBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelSideBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 778, Short.MAX_VALUE)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(panelSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
+                .addGap(11, 11, 11))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -481,6 +483,7 @@ public class PanelGanado extends javax.swing.JPanel {
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton btnRegistrarGanado;
     private javax.swing.JButton btnReportes;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jblDatosObligatorios;
     private javax.swing.JLabel jblDatosOpcionales;
     private javax.swing.JLabel jblFechaNacimiento;
@@ -491,7 +494,6 @@ public class PanelGanado extends javax.swing.JPanel {
     private javax.swing.JLabel jblMensajeSexo;
     private javax.swing.JLabel jblRazasConforman;
     private javax.swing.JLabel jblTituloPanel;
-    private javax.swing.JComboBox<String> jcbAño;
     private javax.swing.JComboBox<String> jcbDia;
     private javax.swing.JComboBox<String> jcbEstado;
     private javax.swing.JComboBox<String> jcbMes;

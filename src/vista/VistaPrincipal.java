@@ -45,22 +45,15 @@ public class VistaPrincipal extends javax.swing.JFrame {
         panelHeader = new javax.swing.JPanel();
         lblFecha = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
-        panelInicio = new javax.swing.JPanel();
-        lblTituloLitrosHoy = new javax.swing.JLabel();
-        lblLitrosHoy = new javax.swing.JLabel();
-        lblTituloPromedioMes = new javax.swing.JLabel();
-        lblTituloMayorProduccion = new javax.swing.JLabel();
-        lblTituloMenorProduccion = new javax.swing.JLabel();
-        lblPromedioMes = new javax.swing.JLabel();
-        lblMayorProduccion = new javax.swing.JLabel();
-        lblMenorProduccion = new javax.swing.JLabel();
+        panelVacio = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         lblBienvenido = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         bacgraund.setBackground(new java.awt.Color(245, 245, 245));
 
-        panelSideBar.setBackground(new java.awt.Color(27, 37, 55));
+        panelSideBar.setBackground(new java.awt.Color(24, 38, 63));
         panelSideBar.setForeground(new java.awt.Color(46, 125, 50));
         panelSideBar.setPreferredSize(new java.awt.Dimension(270, 892));
 
@@ -229,95 +222,30 @@ public class VistaPrincipal extends javax.swing.JFrame {
             .addComponent(lblUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        panelInicio.setBackground(new java.awt.Color(245, 245, 245));
+        panelVacio.setBackground(new java.awt.Color(245, 245, 245));
 
-        lblTituloLitrosHoy.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblTituloLitrosHoy.setForeground(new java.awt.Color(0, 0, 0));
-        lblTituloLitrosHoy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTituloLitrosHoy.setText("Litros hoy");
-        lblTituloLitrosHoy.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblLitrosHoy.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblLitrosHoy.setForeground(new java.awt.Color(0, 0, 0));
-        lblLitrosHoy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblLitrosHoy.setText("56L");
-        lblLitrosHoy.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblTituloPromedioMes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblTituloPromedioMes.setForeground(new java.awt.Color(0, 0, 0));
-        lblTituloPromedioMes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTituloPromedioMes.setText("Promedio mes");
-        lblTituloPromedioMes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblTituloMayorProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblTituloMayorProduccion.setForeground(new java.awt.Color(0, 0, 0));
-        lblTituloMayorProduccion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTituloMayorProduccion.setText("Mayor producción");
-        lblTituloMayorProduccion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblTituloMenorProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblTituloMenorProduccion.setForeground(new java.awt.Color(0, 0, 0));
-        lblTituloMenorProduccion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTituloMenorProduccion.setText("Menor produccion");
-        lblTituloMenorProduccion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblPromedioMes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblPromedioMes.setForeground(new java.awt.Color(0, 0, 0));
-        lblPromedioMes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPromedioMes.setText("30L");
-        lblPromedioMes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblMayorProduccion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblMayorProduccion.setForeground(new java.awt.Color(0, 0, 0));
-        lblMayorProduccion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMayorProduccion.setText("02/04/2025: 56L");
-        lblMayorProduccion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblMenorProduccion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblMenorProduccion.setForeground(new java.awt.Color(0, 0, 0));
-        lblMenorProduccion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMenorProduccion.setText("05/04/2025: 20L");
-        lblMenorProduccion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        javax.swing.GroupLayout panelInicioLayout = new javax.swing.GroupLayout(panelInicio);
-        panelInicio.setLayout(panelInicioLayout);
-        panelInicioLayout.setHorizontalGroup(
-            panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelInicioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblTituloLitrosHoy, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
-                    .addComponent(lblLitrosHoy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTituloPromedioMes, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-                    .addComponent(lblPromedioMes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTituloMayorProduccion, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                    .addComponent(lblMayorProduccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblMenorProduccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblTituloMenorProduccion, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)))
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        panelInicioLayout.setVerticalGroup(
-            panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
-                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTituloLitrosHoy, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelInicioLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblTituloPromedioMes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblTituloMayorProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblTituloMenorProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
-                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLitrosHoy, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPromedioMes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMayorProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMenorProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panelVacioLayout = new javax.swing.GroupLayout(panelVacio);
+        panelVacio.setLayout(panelVacioLayout);
+        panelVacioLayout.setHorizontalGroup(
+            panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        panelVacioLayout.setVerticalGroup(
+            panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelVacioLayout.createSequentialGroup()
+                .addGap(178, 178, 178)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -336,8 +264,10 @@ public class VistaPrincipal extends javax.swing.JFrame {
                     .addGroup(bacgraundLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(bacgraundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(panelInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(bacgraundLayout.createSequentialGroup()
+                                .addComponent(lblBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                            .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
         );
         bacgraundLayout.setVerticalGroup(
             bacgraundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -348,7 +278,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(panelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -392,12 +322,24 @@ public class VistaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> new VistaPrincipal().setVisible(true));
     }
 
-    public JPanel getPanel() {
+    public JPanel getPanelSideBar() {
         return panelSideBar;
+    }
+
+    public JPanel getBacgraund() {
+        return bacgraund;
     }
 
     public JButton getBtnClientes() {
         return btnClientes;
+    }
+
+    public JButton getBtnFinanzas() {
+        return btnFinanzas;
+    }
+
+    public JButton getBtnGanado() {
+        return btnGanado;
     }
 
     public JButton getBtnInicio() {
@@ -407,6 +349,20 @@ public class VistaPrincipal extends javax.swing.JFrame {
     public JButton getBtnProduccion() {
         return btnProduccion;
     }
+
+    public JButton getBtnReportes() {
+        return btnReportes;
+    }
+
+    public JButton getBtnSalir() {
+        return btnSalir;
+    }
+
+    public JPanel getPanelVacio() {
+        return panelVacio;
+    }
+
+    
     
     
     
@@ -421,21 +377,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnProduccion;
     private javax.swing.JButton btnReportes;
     private javax.swing.JButton btnSalir;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblBienvenido;
     private javax.swing.JLabel lblFecha;
-    private javax.swing.JLabel lblLitrosHoy;
-    private javax.swing.JLabel lblMayorProduccion;
-    private javax.swing.JLabel lblMenorProduccion;
-    private javax.swing.JLabel lblPromedioMes;
-    private javax.swing.JLabel lblTituloLitrosHoy;
-    private javax.swing.JLabel lblTituloMayorProduccion;
-    private javax.swing.JLabel lblTituloMenorProduccion;
-    private javax.swing.JLabel lblTituloPromedioMes;
     private javax.swing.JLabel lblTituloSideBar;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JPanel panelHeader;
-    private javax.swing.JPanel panelInicio;
     private javax.swing.JPanel panelLinea;
     private javax.swing.JPanel panelSideBar;
+    private javax.swing.JPanel panelVacio;
     // End of variables declaration//GEN-END:variables
 }

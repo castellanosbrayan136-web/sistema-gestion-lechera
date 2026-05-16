@@ -77,6 +77,8 @@ public class ControladorIniciarSesion implements ActionListener {
         
         if (usuario != null) {
             ScreenManager.abrirVistaPrincipal(usuario, vistaAutenticacion);
+        } else {
+            panelIniciarSesion.setMensajeContraseña("Usuario o contraseña incorrecta!");
         }
     }
     
