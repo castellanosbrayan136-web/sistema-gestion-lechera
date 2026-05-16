@@ -78,7 +78,7 @@ public class PanelIniciarSesion extends javax.swing.JPanel {
         lblLogo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblLogo.setForeground(new java.awt.Color(0, 0, 0));
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/silhouette-black-cow-head-logo-design-graphic-symbol-icon-illustration-creative-idea-vector (1).jpg"))); // NOI18N
-        lblLogo.setText("MilkSys");
+        lblLogo.setText("GanaDex");
 
         btnEntrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnEntrar.setForeground(new java.awt.Color(255, 255, 255));

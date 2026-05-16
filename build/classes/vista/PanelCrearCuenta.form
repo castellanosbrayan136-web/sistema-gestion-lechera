@@ -89,8 +89,8 @@
                           <Component id="jSeparator3" min="-2" pref="542" max="-2" attributes="0"/>
                           <Component id="mensajeCorreo" min="-2" pref="540" max="-2" attributes="0"/>
                           <Component id="jblNombreFinca" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="540" max="-2" attributes="0"/>
                           <Component id="txtNombreFinca" min="-2" pref="542" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="540" max="-2" attributes="0"/>
                           <Component id="jSeparator4" min="-2" pref="542" max="-2" attributes="0"/>
                           <Component id="mensajeNombreDeLaFinca" min="-2" pref="540" max="-2" attributes="0"/>
                           <Component id="jblUbicacion" min="-2" pref="542" max="-2" attributes="0"/>
@@ -108,7 +108,6 @@
                           <Component id="mensajeContraseña" min="-2" pref="540" max="-2" attributes="0"/>
                           <Component id="btnRegistrar" min="-2" pref="240" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="566" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -145,11 +144,11 @@
                       <Component id="jblNombreFinca" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" min="-2" pref="20" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
                               <Component id="txtNombreFinca" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jLabel1" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                       <Component id="jSeparator4" min="-2" max="-2" attributes="0"/>
@@ -252,7 +251,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Registrar"/>
+                <Property name="text" type="java.lang.String" value="REGISTRAR"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>

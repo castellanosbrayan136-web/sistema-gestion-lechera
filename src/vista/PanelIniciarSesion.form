@@ -182,7 +182,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagenes/folder/silhouette-black-cow-head-logo-design-graphic-symbol-icon-illustration-creative-idea-vector (1).jpg"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MilkSys"/>
+            <Property name="text" type="java.lang.String" value="GanaDex"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnEntrar">

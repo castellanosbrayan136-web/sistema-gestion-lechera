@@ -44,6 +44,8 @@ public class VistaAutenticacion extends javax.swing.JFrame {
 
         background.setBackground(new java.awt.Color(245, 245, 245));
 
+        sideBar.setBackground(new java.awt.Color(27, 37, 55));
+
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -63,6 +65,7 @@ public class VistaAutenticacion extends javax.swing.JFrame {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
+        btnIniciarSesion.setBackground(new java.awt.Color(39, 51, 69));
         btnIniciarSesion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnIniciarSesion.setForeground(new java.awt.Color(255, 255, 255));
         btnIniciarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-iniciar-sesión-32.png"))); // NOI18N
@@ -73,6 +76,7 @@ public class VistaAutenticacion extends javax.swing.JFrame {
         btnIniciarSesion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnIniciarSesion.setIconTextGap(20);
 
+        btnCrearCuenta.setBackground(new java.awt.Color(39, 51, 69));
         btnCrearCuenta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnCrearCuenta.setForeground(new java.awt.Color(255, 255, 255));
         btnCrearCuenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-crear-nuevo-32.png"))); // NOI18N
@@ -83,6 +87,7 @@ public class VistaAutenticacion extends javax.swing.JFrame {
         btnCrearCuenta.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnCrearCuenta.setIconTextGap(20);
 
+        btnSalir.setBackground(new java.awt.Color(39, 51, 69));
         btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-salida-de-emergencia-32.png"))); // NOI18N
