@@ -373,6 +373,14 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         return jcbMunicipio;
     }
 
+    public void setJcbDepartamento(JComboBox<String> jcbDepartamento) {
+        this.jcbDepartamento = jcbDepartamento;
+    }
+
+    public void setJcbMunicipio(JComboBox<String> jcbMunicipio) {
+        this.jcbMunicipio = jcbMunicipio;
+    }
+
     public JButton getBtnRegistrar() {
         return btnRegistrar;
     }

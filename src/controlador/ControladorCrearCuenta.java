@@ -7,7 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
+import modelo.Departamento;
+import modelo.DepartamentoDAO;
 import modelo.Ubicacion;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
@@ -17,15 +21,19 @@ import vista.PanelCrearCuenta;
 public class ControladorCrearCuenta implements ActionListener {
     private final PanelCrearCuenta panelCrearCuenta;
     private final UsuarioDAO usuarioDAO;
+    private DepartamentoDAO departamentoDAO;
 
-    public ControladorCrearCuenta(PanelCrearCuenta panelCrearCuenta, UsuarioDAO usuarioDAO) {
+    public ControladorCrearCuenta(PanelCrearCuenta panelCrearCuenta, UsuarioDAO usuarioDAO, DepartamentoDAO departamentoDAO) {
         this.panelCrearCuenta = panelCrearCuenta;
         this.usuarioDAO = usuarioDAO;
+        this.departamentoDAO = departamentoDAO;
         activarEventos();
+        llenarJcomboBoxDepartamentos();
     }
     
     public void eventoBotones() {
         panelCrearCuenta.getBtnRegistrar().addActionListener(this);
+        panelCrearCuenta.getJcbDepartamento().addActionListener(this);
     }
     
     public void activarEventos() {
@@ -42,6 +50,8 @@ public class ControladorCrearCuenta implements ActionListener {
     public void actionPerformed(ActionEvent e) { 
         if (e.getSource() == panelCrearCuenta.getBtnRegistrar()) {
             registrar();
+        } else if (e.getSource() == panelCrearCuenta.getJcbDepartamento()) {
+            llenarJcomboBoxMunicipios();
         }
     }
     
@@ -205,5 +215,26 @@ public class ControladorCrearCuenta implements ActionListener {
         }
     }
     
-    //Murio aprox 5:10pm - 5:20pm del dia jueves 14 de mayo del año 2025
+    public void llenarJcomboBoxDepartamentos() {
+        for (Departamento departamento : departamentoDAO.retornarDepartamentos() ) {
+            panelCrearCuenta.getJcbDepartamento().addItem(departamento.getDepartamento());
+        }
+        llenarJcomboBoxMunicipios();
+    }
+    
+    public void llenarJcomboBoxMunicipios() {
+        String departamentoSeleccionado = panelCrearCuenta.getJcbDepartamento().getSelectedItem().toString();
+        
+        for (Departamento departamento : departamentoDAO.retornarDepartamentos()) {
+            if (departamento.getDepartamento().equals(departamentoSeleccionado)) {
+                panelCrearCuenta.getJcbMunicipio().removeAllItems();
+                panelCrearCuenta.getJcbMunicipio().addItem("Municipio");
+                for (String municipio : departamento.getMunicipios()) {
+                    panelCrearCuenta.getJcbMunicipio().addItem(municipio);
+                }
+            }
+        }
+    }
+    
+    //Murio aprox 5:10pm - 5:20pm del dia jueves 14 de mayo del año 2026
 }

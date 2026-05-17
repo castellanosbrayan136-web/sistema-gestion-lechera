@@ -10,12 +10,14 @@ import controlador.ControladorPrincipal;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import modelo.DepartamentoDAO;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
 
 
 public class ScreenManager {
     private static UsuarioDAO usuarioDAO = new UsuarioDAO();
+    private static DepartamentoDAO departamentoDAO = new DepartamentoDAO();
     
     public static void abrirVistaAutenticacion() {
         VistaAutenticacion vistaAutenticacion = new VistaAutenticacion();
@@ -32,7 +34,7 @@ public class ScreenManager {
     public static void cambiarAPanelCrearCuenta(VistaAutenticacion vistaAutenticacion) {
         PanelCrearCuenta panelCrearCuenta = new PanelCrearCuenta();
         
-        new ControladorCrearCuenta(panelCrearCuenta, usuarioDAO);
+        new ControladorCrearCuenta(panelCrearCuenta, usuarioDAO, departamentoDAO);
         
         cambiarPaneles(vistaAutenticacion.getPanelIntercambiable(), panelCrearCuenta, 881, 1128);
     }
