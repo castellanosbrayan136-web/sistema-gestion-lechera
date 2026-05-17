@@ -52,8 +52,6 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
-        jcbDepartamento = new javax.swing.JComboBox<>();
-        jcbMunicipio = new javax.swing.JComboBox<>();
         txtVereda = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         mensajeNombres = new javax.swing.JLabel();
@@ -62,6 +60,8 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         mensajeCorreo = new javax.swing.JLabel();
         mensajeNombreDeLaFinca = new javax.swing.JLabel();
         mensajeUbicacion = new javax.swing.JLabel();
+        jcbDepartamento = new javax.swing.JComboBox<>();
+        jcbMunicipio = new javax.swing.JComboBox<>();
 
         background.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -90,7 +90,7 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         txtNombres.setBorder(null);
         txtNombres.setCaretColor(new java.awt.Color(0, 0, 0));
 
-        btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrar.setText("REGISTRAR");
         btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -141,20 +141,6 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
 
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
 
-        jcbDepartamento.setBackground(new java.awt.Color(255, 255, 255));
-        jcbDepartamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbDepartamento.setForeground(new java.awt.Color(0, 0, 0));
-        jcbDepartamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Santander", "Boyaca", " " }));
-        jcbDepartamento.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Departamento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jcbDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jcbMunicipio.setBackground(new java.awt.Color(255, 255, 255));
-        jcbMunicipio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbMunicipio.setForeground(new java.awt.Color(0, 0, 0));
-        jcbMunicipio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Malaga", "Bucaramanga", "Tona" }));
-        jcbMunicipio.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Ciudad/Municipio", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jcbMunicipio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
         txtVereda.setBackground(new java.awt.Color(255, 255, 255));
         txtVereda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtVereda.setForeground(new java.awt.Color(153, 153, 153));
@@ -183,13 +169,21 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         mensajeUbicacion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         mensajeUbicacion.setForeground(new java.awt.Color(204, 0, 0));
 
+        jcbDepartamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcbDepartamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Departamento" }));
+        jcbDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jcbMunicipio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcbMunicipio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Municipio" }));
+        jcbMunicipio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
         javax.swing.GroupLayout panelIniciarSesionLayout = new javax.swing.GroupLayout(panelIniciarSesion);
         panelIniciarSesion.setLayout(panelIniciarSesionLayout);
         panelIniciarSesionLayout.setHorizontalGroup(
             panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelIniciarSesionLayout.createSequentialGroup()
                 .addGap(70, 70, 70)
-                .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblCrearCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -210,9 +204,9 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
                     .addComponent(mensajeNombreDeLaFinca, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jblUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelIniciarSesionLayout.createSequentialGroup()
-                        .addComponent(jcbDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcbDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jcbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcbMunicipio, 0, 175, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(txtVereda, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(mensajeUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -220,7 +214,7 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
                     .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mensajeContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         panelIniciarSesionLayout.setVerticalGroup(
             panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,9 +261,10 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
                 .addComponent(jblUbicacion)
                 .addGap(12, 12, 12)
                 .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcbDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtVereda, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtVereda, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jcbDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(2, 2, 2)
                 .addComponent(mensajeUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)

@@ -55,7 +55,7 @@
                       <Component id="jpfContraseña" min="-2" pref="542" max="-2" attributes="0"/>
                       <Component id="jSeparator2" min="-2" pref="542" max="-2" attributes="0"/>
                       <Component id="mensajeContraseña" min="-2" pref="540" max="-2" attributes="0"/>
-                      <Component id="btnEntrar" min="-2" pref="240" max="-2" attributes="0"/>
+                      <Component id="btnEntrar" min="-2" pref="200" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -188,7 +188,7 @@
         <Component class="javax.swing.JButton" name="btnEntrar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="1"/>
+              <Font name="Segoe UI" size="20" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
