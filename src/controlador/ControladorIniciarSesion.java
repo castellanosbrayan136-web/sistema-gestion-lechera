@@ -5,6 +5,8 @@ package controlador;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import modelo.Usuario;
@@ -31,6 +33,18 @@ public class ControladorIniciarSesion implements ActionListener {
         panelIniciarSesion.getBtnEntrar().addActionListener(this);
         eventoTxtNombreUsurio();
         eventoTxtContraseña();
+        eventoEnter();
+    }
+    
+    public void eventoEnter() {
+        panelIniciarSesion.getJpfContraseña().addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+               if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                   iniciarSesion();
+               } 
+            }
+        });
     }
     
     public void eventoTxtNombreUsurio() {

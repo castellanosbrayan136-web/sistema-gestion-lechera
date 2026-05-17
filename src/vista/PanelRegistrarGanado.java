@@ -26,19 +26,301 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelRegistrarGanado = new javax.swing.JPanel();
+        jblTituloPanel = new javax.swing.JLabel();
+        jblFechaNacimiento = new javax.swing.JLabel();
+        jcbX = new javax.swing.JLabel();
+        jblRazasConforman = new javax.swing.JLabel();
+        jblMensajeNombre = new javax.swing.JLabel();
+        jblMensajeFecha = new javax.swing.JLabel();
+        jblMensajeRazas = new javax.swing.JLabel();
+        jblMensajeEstadoProduccion = new javax.swing.JLabel();
+        jblDatosObligatorios = new javax.swing.JLabel();
+        jblDatosOpcionales = new javax.swing.JLabel();
+        jcbEstado = new javax.swing.JComboBox<>();
+        jcbMes = new javax.swing.JComboBox<>();
+        jcbDia = new javax.swing.JComboBox<>();
+        jcbAño = new javax.swing.JComboBox<>();
+        jcbRazaMadre = new javax.swing.JComboBox<>();
+        jcbRazaPadre = new javax.swing.JComboBox<>();
+        btnRegistrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtNumeroIdentificacion = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtPeso = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtDescripcion = new javax.swing.JTextField();
+        jblRazasConforman1 = new javax.swing.JLabel();
+
+        panelRegistrarGanado.setBackground(new java.awt.Color(255, 255, 255));
+
+        jblTituloPanel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jblTituloPanel.setForeground(new java.awt.Color(0, 0, 0));
+        jblTituloPanel.setText("Registro de ganado");
+
+        jblFechaNacimiento.setBackground(new java.awt.Color(0, 0, 0));
+        jblFechaNacimiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jblFechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
+        jblFechaNacimiento.setText("Fecha de nacimiento");
+
+        jcbX.setBackground(new java.awt.Color(255, 255, 255));
+        jcbX.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jcbX.setForeground(new java.awt.Color(0, 0, 0));
+        jcbX.setText("X");
+
+        jblRazasConforman.setBackground(new java.awt.Color(0, 0, 0));
+        jblRazasConforman.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jblRazasConforman.setForeground(new java.awt.Color(0, 0, 0));
+        jblRazasConforman.setText("Razas que lo conforman");
+
+        jblMensajeNombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jblMensajeNombre.setForeground(new java.awt.Color(204, 0, 51));
+
+        jblMensajeFecha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jblMensajeFecha.setForeground(new java.awt.Color(204, 0, 51));
+
+        jblMensajeRazas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jblMensajeRazas.setForeground(new java.awt.Color(204, 0, 51));
+
+        jblMensajeEstadoProduccion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jblMensajeEstadoProduccion.setForeground(new java.awt.Color(204, 0, 51));
+
+        jblDatosObligatorios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jblDatosObligatorios.setForeground(new java.awt.Color(0, 0, 0));
+        jblDatosObligatorios.setText("Datos obligatorios");
+
+        jblDatosOpcionales.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jblDatosOpcionales.setForeground(new java.awt.Color(0, 0, 0));
+        jblDatosOpcionales.setText("Datos opcionales");
+
+        jcbEstado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado", "Activo", "Produciendo", "Gestación", "Enfermo", "Vendido", "Muerto" }));
+        jcbEstado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jcbMes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mes" }));
+        jcbMes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jcbDia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día" }));
+        jcbDia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jcbAño.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcbAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año" }));
+        jcbAño.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jcbAño.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbAñoActionPerformed(evt);
+            }
+        });
+
+        jcbRazaMadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcbRazaMadre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Raza madre" }));
+        jcbRazaMadre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jcbRazaPadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcbRazaPadre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Raza padre" }));
+        jcbRazaPadre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btnRegistrar.setText("REGISTRAR");
+        btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nombre del animal");
+
+        txtNombre.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Numero de identificación");
+
+        txtNumeroIdentificacion.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Peso (Kg)");
+
+        txtPeso.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Descripción");
+
+        txtDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txtDescripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDescripcionActionPerformed(evt);
+            }
+        });
+
+        jblRazasConforman1.setBackground(new java.awt.Color(0, 0, 0));
+        jblRazasConforman1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jblRazasConforman1.setForeground(new java.awt.Color(0, 0, 0));
+        jblRazasConforman1.setText("Estado de producción");
+
+        javax.swing.GroupLayout panelRegistrarGanadoLayout = new javax.swing.GroupLayout(panelRegistrarGanado);
+        panelRegistrarGanado.setLayout(panelRegistrarGanadoLayout);
+        panelRegistrarGanadoLayout.setHorizontalGroup(
+            panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jblDatosObligatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(177, 177, 177)
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNumeroIdentificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jblDatosOpcionales, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jblRazasConforman1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblMensajeRazas, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblMensajeEstadoProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                .addComponent(jcbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jblMensajeNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jblFechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                .addComponent(jcbRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(9, 9, 9)
+                                .addComponent(jcbX, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jcbRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jblRazasConforman, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(172, 172, 172)
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53))
+        );
+        panelRegistrarGanadoLayout.setVerticalGroup(
+            panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jblDatosOpcionales, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblDatosObligatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNumeroIdentificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jblMensajeNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jblFechaNacimiento)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jcbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12)
+                        .addComponent(jblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jblRazasConforman)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jcbRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jcbRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jcbX, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jblMensajeRazas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jblRazasConforman1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jcbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jblMensajeEstadoProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(133, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jcbAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAñoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbAñoActionPerformed
+
+    private void txtDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescripcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDescripcionActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRegistrar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jblDatosObligatorios;
+    private javax.swing.JLabel jblDatosOpcionales;
+    private javax.swing.JLabel jblFechaNacimiento;
+    private javax.swing.JLabel jblMensajeEstadoProduccion;
+    private javax.swing.JLabel jblMensajeFecha;
+    private javax.swing.JLabel jblMensajeNombre;
+    private javax.swing.JLabel jblMensajeRazas;
+    private javax.swing.JLabel jblRazasConforman;
+    private javax.swing.JLabel jblRazasConforman1;
+    private javax.swing.JLabel jblTituloPanel;
+    private javax.swing.JComboBox<String> jcbAño;
+    private javax.swing.JComboBox<String> jcbDia;
+    private javax.swing.JComboBox<String> jcbEstado;
+    private javax.swing.JComboBox<String> jcbMes;
+    private javax.swing.JComboBox<String> jcbRazaMadre;
+    private javax.swing.JComboBox<String> jcbRazaPadre;
+    private javax.swing.JLabel jcbX;
+    private javax.swing.JPanel panelRegistrarGanado;
+    private javax.swing.JTextField txtDescripcion;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNumeroIdentificacion;
+    private javax.swing.JTextField txtPeso;
     // End of variables declaration//GEN-END:variables
 }

@@ -10,5 +10,17 @@
       "vereda": "Buenavista"
     },
     "contraseña": "wow123"
+  },
+  {
+    "nombresYApellidos": "f",
+    "nombreDeUsuario": "f",
+    "correoElectronico": "f",
+    "nombreDeLafinca": "f",
+    "ubicacion": {
+      "departamento": "Departamento",
+      "municipio": "Municipio",
+      "vereda": "f"
+    },
+    "contraseña": "f"
   }
 ]

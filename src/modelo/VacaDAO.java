@@ -16,29 +16,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class BovinoDAO {
+public class VacaDAO {
     private final Gson gson;
     private final String ruta;
-    private final List<Bovino> ganado;
-    private static final List<Bovino> hembras = new ArrayList<>();
-    private static final List<Bovino> machos = new ArrayList<>();
+    private final List<Vaca> listaVacas;
 
-    public BovinoDAO() {
+    public VacaDAO() {
         this.gson = new GsonBuilder().setPrettyPrinting().create();
         this.ruta = "ganado.json";
-        this.ganado = cargarDatos();
-        cargarListasMachosYHembras();
+        this.listaVacas = cargarDatos();
     }
     
     private void guardarDatos() {
         try (Writer writer = new FileWriter(ruta)) {
-            gson.toJson(ganado,writer);
+            gson.toJson(listaVacas,writer);
         } catch (IOException ex) {
             System.err.println("Error al guardar datos: " + ex.getMessage());
         }
     }
     
-    private List<Bovino> cargarDatos() {
+    private List<Vaca> cargarDatos() {
         File archivo = new File(ruta);
         
         if (!archivo.exists()) {
@@ -46,8 +43,8 @@ public class BovinoDAO {
         }
         
         try (Reader reader = new FileReader(archivo)) {
-            Type tipoLista = new TypeToken<List<Bovino>>(){}.getType();
-            List<Bovino> lista = gson.fromJson(reader, tipoLista);
+            Type tipoLista = new TypeToken<List<Vaca>>(){}.getType();
+            List<Vaca> lista = gson.fromJson(reader, tipoLista);
             
             return (lista != null) ? lista : new ArrayList<>();
         } catch (IOException ex) {
@@ -56,7 +53,7 @@ public class BovinoDAO {
     }
     
     private String generarCodigoInterno() {
-        int codigoCorrespondiente = ganado.size() + 1;
+        int codigoCorrespondiente = listaVacas.size() + 1;
         
         if (codigoCorrespondiente < 10) {
             return "00" + String.valueOf(codigoCorrespondiente);
@@ -67,52 +64,19 @@ public class BovinoDAO {
         }
     }
     
-    public boolean registrar(Bovino bovino) {
+    public boolean registrar(Vaca bovino) {
         if (bovino == null) {
             return false;
         }
         
         bovino.setCodigoInterno(generarCodigoInterno());
         
-        if(verificarSexo(bovino)) {
-            ganado.add(bovino);
-            machos.add(bovino);
-            guardarDatos();
-            return true;
-        } else {
-            ganado.add(bovino);
-            hembras.add(bovino);
-            guardarDatos();
-            return true;
-        }
+        listaVacas.add(bovino);
+        guardarDatos();
+        return true;
     }
     
-    private void cargarListasMachosYHembras() {
-        machos.clear();
-        hembras.clear();
-        
-        for (Bovino bovino: ganado) {
-            if (verificarSexo(bovino)) {
-                machos.add(bovino);
-            } else {
-                hembras.add(bovino);
-            }
-        }
-    }
-    
-    private boolean verificarSexo(Bovino bovino) {
-        return bovino.getSexo().equals("macho");
-    }
-    
-    public List<Bovino> retornarGanado() {
-        return ganado;
-    }
-    
-    public List<Bovino> retornarMachos() {
-        return machos;
-    }
-    
-    public List<Bovino> retornarHembras() {
-        return hembras;
+    public List<Vaca> retornarListaVacas() {
+        return listaVacas;
     }
 }

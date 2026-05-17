@@ -5,25 +5,23 @@ package modelo;
 import java.time.LocalDate;
 
 
-public class Bovino {
+public class Vaca {
     private String codigoInterno;
     private final String nombre;
     private final LocalDate fechaNacimiento;
     private final String razaPadre;
     private final String razaMadre;
-    private final String sexo;
     private String estado;
     private String descripcion;
     private String numeroIdentificador;
     private Double peso;
 
-    public Bovino(String nombre, LocalDate fechaNacimiento, String razaPadre, String razaMadre, String sexo, String estado,String descripcion, String numeroIdentificador, Double peso) {
+    public Vaca(String nombre, LocalDate fechaNacimiento, String razaPadre, String razaMadre, String estado,String descripcion, String numeroIdentificador, Double peso) {
         this.codigoInterno = "0";
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.razaPadre = razaPadre;
         this.razaMadre = razaMadre;
-        this.sexo = sexo;
         this.estado = estado;
         this.descripcion = descripcion;
         this.numeroIdentificador = numeroIdentificador;
@@ -51,10 +49,6 @@ public class Bovino {
         return razaMadre;
     }
 
-    public String getSexo() {
-        return sexo;
-    }
-
     public String getEstado() {
         return estado;
     }
@@ -74,6 +68,4 @@ public class Bovino {
     public void setCodigoInterno(String codigoInterno) {
         this.codigoInterno = codigoInterno;
     }
-    
-    
 }

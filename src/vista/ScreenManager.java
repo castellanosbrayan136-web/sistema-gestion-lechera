@@ -4,6 +4,7 @@ package vista;
 
 import controlador.ControladorAutenticacion;
 import controlador.ControladorCrearCuenta;
+import controlador.ControladorGanado;
 import controlador.ControladorIniciarSesion;
 import controlador.ControladorPrincipal;
 import java.awt.BorderLayout;
@@ -33,7 +34,7 @@ public class ScreenManager {
         
         new ControladorCrearCuenta(panelCrearCuenta, usuarioDAO);
         
-        cambiarPaneles(vistaAutenticacion.getPanelIntercambiable(), panelCrearCuenta, 881, 1128, vistaAutenticacion);
+        cambiarPaneles(vistaAutenticacion.getPanelIntercambiable(), panelCrearCuenta, 881, 1128);
     }
     
     public static void cambiarAPanelIniciarSesion(VistaAutenticacion vistaAutenticacion) {
@@ -41,7 +42,7 @@ public class ScreenManager {
         
         new ControladorIniciarSesion(usuarioDAO, panelIniciarSesion, vistaAutenticacion);
         
-        cambiarPaneles(vistaAutenticacion.getPanelIntercambiable(), panelIniciarSesion, 881, 1128, vistaAutenticacion);
+        cambiarPaneles(vistaAutenticacion.getPanelIntercambiable(), panelIniciarSesion, 881, 1128);
     }
     
     public static void abrirVistaPrincipal(Usuario usuario, VistaAutenticacion vistaAutenticacion) {
@@ -52,7 +53,7 @@ public class ScreenManager {
         vistaPrincipal.setTitle("Sistema de gestion ganadera");
         vistaPrincipal.setLocationRelativeTo(null);
         
-        new ControladorPrincipal(vistaPrincipal);
+        new ControladorPrincipal(vistaPrincipal, usuario);
         
         vistaPrincipal.setVisible(true);
     }
@@ -64,20 +65,28 @@ public class ScreenManager {
     public static void cambiarAPanelInicio(VistaPrincipal vistaPrincipal) {
         PanelInicio panelInicio = new PanelInicio();
         
-        cambiarPaneles(vistaPrincipal.getPanelVacio(), panelInicio, 1128, 778, vistaPrincipal);
+        cambiarPaneles(vistaPrincipal.getPanelVacio(), panelInicio, 1114, 778);
     }
     
     public static void cambiarAPanelGanado(VistaPrincipal vistaPrincipal) {
         PanelGanado panelGanado = new PanelGanado();
         
-        cambiarPaneles(vistaPrincipal.getPanelVacio(), panelGanado, 1128, 778, vistaPrincipal);
+        new ControladorGanado(panelGanado);
+        
+        cambiarPaneles(vistaPrincipal.getPanelVacio(), panelGanado, 1128, 778);
     }
     
-    public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo, JFrame vista) {
+    public static void cambiarAPanelRegistrarGanado(PanelGanado panelGanado) {
+        PanelRegistrarGanado panelRegistrarGanado = new PanelRegistrarGanado();
+        
+        cambiarPaneles(panelGanado.getPanelVacio(), panelRegistrarGanado, 860, 764);
+    }
+    
+    public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {
         panelAIntercambiar.setSize(ancho,largo);
         panelVacio.removeAll();
         panelVacio.add(panelAIntercambiar, BorderLayout.CENTER);
-        vista.revalidate();
-        vista.repaint();
+        panelVacio.revalidate();
+        panelVacio.repaint();
     }
 }
