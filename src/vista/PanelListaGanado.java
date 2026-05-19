@@ -44,11 +44,11 @@ public class PanelListaGanado extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Nombre", "Edad", "Raza", "Estado"
+                "Codigo", "Nombre", "Edad", "Raza", "Estado"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {

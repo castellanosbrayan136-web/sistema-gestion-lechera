@@ -69,8 +69,7 @@ public class VacaDAO {
         }
     }
     
-    private String generarCodigoInterno() {
-        int codigoCorrespondiente = listaVacas.size() + 1;
+    private String generarCodigoInterno(int codigoCorrespondiente) {
         
         if (codigoCorrespondiente < 10) {
             return "00" + String.valueOf(codigoCorrespondiente);
@@ -86,7 +85,7 @@ public class VacaDAO {
             return false;
         }
         
-        bovino.setCodigoInterno(generarCodigoInterno());
+        bovino.setCodigoInterno(generarCodigoInterno(retornarCantidadDeAnimalesPorUsuario(bovino.getDueño())));
         
         listaVacas.add(bovino);
         guardarDatos();
@@ -103,7 +102,35 @@ public class VacaDAO {
         return lista;
     }
     
+    public int retornarCantidadDeAnimalesPorUsuario(String nombreUsuario) {
+        List<Vaca> lista = retornarListaVacasPorUsuario(nombreUsuario);
+        
+        return lista.size() + 1;
+    }
+    
     public List<String> retornarListadoDeRazas() {
         return listaRazas;
+    }
+    
+    public List<Vaca> filtrarVacasPorCoincidencia(String usuario, String nombreVaca) {
+        List<Vaca> listaPorDueño = retornarListaVacasPorUsuario(usuario);
+        
+        List<Vaca> listaFiltrada = new ArrayList<>();
+        
+        for (Vaca vaca : listaPorDueño) {
+            if (vaca.getNombre().startsWith(nombreVaca)) {
+                listaFiltrada.add(vaca);
+            }
+        }
+        return listaFiltrada;
+    }
+    
+    public Vaca buscarVacaPorCodigo(String codigo) {
+        for (Vaca vaca : listaVacas) {
+            if (vaca.getCodigoInterno().equals(codigo)) {
+                return vaca;
+            }
+        }
+        return null;
     }
 }
