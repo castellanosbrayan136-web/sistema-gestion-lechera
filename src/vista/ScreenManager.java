@@ -6,6 +6,7 @@ import controlador.ControladorAutenticacion;
 import controlador.ControladorCrearCuenta;
 import controlador.ControladorGanado;
 import controlador.ControladorIniciarSesion;
+import controlador.ControladorListaGanado;
 import controlador.ControladorPrincipal;
 import controlador.ControladorRegistrarGanado;
 import java.awt.BorderLayout;
@@ -73,20 +74,28 @@ public class ScreenManager {
         cambiarPaneles(vistaPrincipal.getPanelVacio(), panelInicio, 1114, 778);
     }
     
-    public static void cambiarAPanelGanado(VistaPrincipal vistaPrincipal) {
+    public static void cambiarAPanelGanado(VistaPrincipal vistaPrincipal, Usuario usuario) {
         PanelGanado panelGanado = new PanelGanado();
         
-        new ControladorGanado(panelGanado);
+        new ControladorGanado(panelGanado, usuario);
         
         cambiarPaneles(vistaPrincipal.getPanelVacio(), panelGanado, 1128, 778);
     }
     
-    public static void cambiarAPanelRegistrarGanado(PanelGanado panelGanado) {
+    public static void cambiarAPanelRegistrarGanado(PanelGanado panelGanado, Usuario usuario) {
         PanelRegistrarGanado panelRegistrarGanado = new PanelRegistrarGanado();
         
-        new ControladorRegistrarGanado(panelRegistrarGanado, vacaDAO);
+        new ControladorRegistrarGanado(panelRegistrarGanado, vacaDAO, usuario);
         
         cambiarPaneles(panelGanado.getPanelVacio(), panelRegistrarGanado, 860, 764);
+    }
+    
+    public static void cambiarAPanelListaGanado(PanelGanado panelGanado, Usuario usuario) {
+        PanelListaGanado panelListaGanado = new PanelListaGanado();
+        
+        new ControladorListaGanado(panelListaGanado, vacaDAO, usuario);
+        
+        cambiarPaneles(panelGanado.getPanelVacio(), panelListaGanado, 860, 764);
     }
     
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {

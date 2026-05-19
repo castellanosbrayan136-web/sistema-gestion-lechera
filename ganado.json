@@ -1,16 +1,62 @@
 [
   {
     "codigoInterno": "001",
-    "nombre": "Princesa",
+    "nombre": "Lola",
     "fechaNacimiento": {
-      "year": 2016,
+      "year": 2022,
+      "month": 3,
+      "day": 3
+    },
+    "razaPadre": "Nelore",
+    "razaMadre": "Simental",
+    "estado": "Produciendo",
+    "descripcion": "No hay descripcion.",
+    "numeroIdentificador": "No se registro numero identificador.",
+    "dueño": "Brayan C"
+  },
+  {
+    "codigoInterno": "002",
+    "nombre": "Canela",
+    "fechaNacimiento": {
+      "year": 2020,
       "month": 6,
+      "day": 8
+    },
+    "razaPadre": "Romosinuano",
+    "razaMadre": "Simental",
+    "estado": "Gestación",
+    "descripcion": "No hay descripcion.",
+    "numeroIdentificador": "No se registro numero identificador.",
+    "dueño": "Brayan C"
+  },
+  {
+    "codigoInterno": "003",
+    "nombre": "prinsesa",
+    "fechaNacimiento": {
+      "year": 2020,
+      "month": 4,
+      "day": 6
+    },
+    "razaPadre": "Nelore",
+    "razaMadre": "Nelore",
+    "estado": "Gestación",
+    "descripcion": "No hay descripcion.",
+    "numeroIdentificador": "No se registro numero identificador.",
+    "dueño": "Brayan C"
+  },
+  {
+    "codigoInterno": "004",
+    "nombre": "Lalala",
+    "fechaNacimiento": {
+      "year": 2021,
+      "month": 2,
       "day": 4
     },
-    "razaPadre": "Ayrshire",
-    "razaMadre": "Ayrshire",
-    "estado": "Produciendo",
-    "descripcion": "vaca con manchas negras",
-    "numeroIdentificador": "No se registro numero identificador."
+    "razaPadre": "Brahman",
+    "razaMadre": "Nelore",
+    "estado": "Enfermo",
+    "descripcion": "No hay descripcion.",
+    "numeroIdentificador": "No se registro numero identificador.",
+    "dueño": "f"
   }
 ]

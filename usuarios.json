@@ -22,5 +22,17 @@
       "vereda": "asfd"
     },
     "contraseña": "fdsa"
+  },
+  {
+    "nombresYApellidos": "f",
+    "nombreDeUsuario": "f",
+    "correoElectronico": "f",
+    "nombreDeLafinca": "f",
+    "ubicacion": {
+      "departamento": "Amazonas",
+      "municipio": "Puerto Nariño",
+      "vereda": "f"
+    },
+    "contraseña": "f"
   }
 ]

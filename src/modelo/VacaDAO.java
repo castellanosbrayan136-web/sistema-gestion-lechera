@@ -93,8 +93,14 @@ public class VacaDAO {
         return true;
     }
     
-    public List<Vaca> retornarListaVacas() {
-        return listaVacas;
+    public List<Vaca> retornarListaVacasPorUsuario(String usuario) {
+        List<Vaca> lista = new ArrayList<>();
+        for (Vaca vaca : listaVacas) {
+            if (vaca.getDueño().equals(usuario)) {
+                lista.add(vaca);
+            }
+        }
+        return lista;
     }
     
     public List<String> retornarListadoDeRazas() {

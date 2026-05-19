@@ -157,6 +157,15 @@ public class PanelGanado extends javax.swing.JPanel {
     public JButton getBtnRegistrarGanado() {
         return btnRegistrarGanado;
     }
+
+    public JButton getBtnEditarDatos() {
+        return btnEditarDatos;
+    }
+
+    public JButton getBtnListaGanado() {
+        return btnListaGanado;
+    }
+    
     
 
     

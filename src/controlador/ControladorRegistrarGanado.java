@@ -10,18 +10,21 @@ import java.time.YearMonth;
 import java.time.format.TextStyle;
 import java.util.Locale;
 import javax.swing.JOptionPane;
+import modelo.Usuario;
 import modelo.Vaca;
 import modelo.VacaDAO;
 import vista.PanelRegistrarGanado;
 
 
 public class ControladorRegistrarGanado implements ActionListener {
+    private Usuario usuario;
     private PanelRegistrarGanado panelRegistrarGanado;
     private VacaDAO vacaDAO;
 
-    public ControladorRegistrarGanado(PanelRegistrarGanado panelRegistrarGanado, VacaDAO vacaDAO) {
+    public ControladorRegistrarGanado(PanelRegistrarGanado panelRegistrarGanado, VacaDAO vacaDAO, Usuario usuario) {
         this.panelRegistrarGanado = panelRegistrarGanado;
         this.vacaDAO = vacaDAO;
+        this.usuario = usuario;
         llenarJlables();
         activarEventos();
     }
@@ -129,6 +132,6 @@ public class ControladorRegistrarGanado implements ActionListener {
             numeroIdentificador = "No se registro numero identificador.";
         }
         
-        return new Vaca(panelRegistrarGanado.getNombre() ,fecha , panelRegistrarGanado.getJcbRazaPadre().getSelectedItem().toString(), panelRegistrarGanado.getJcbRazaMadre().getSelectedItem().toString(), panelRegistrarGanado.getJcbEstado().getSelectedItem().toString(), descripcion, numeroIdentificador, peso);
+        return new Vaca(panelRegistrarGanado.getNombre() ,fecha , panelRegistrarGanado.getJcbRazaPadre().getSelectedItem().toString(), panelRegistrarGanado.getJcbRazaMadre().getSelectedItem().toString(), panelRegistrarGanado.getJcbEstado().getSelectedItem().toString(), descripcion, numeroIdentificador, peso, usuario.getNombreDeUsuario());
     }
 }

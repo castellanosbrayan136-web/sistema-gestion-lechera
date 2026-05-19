@@ -15,8 +15,9 @@ public class Vaca {
     private String descripcion;
     private String numeroIdentificador;
     private Double peso;
+    private String dueño;
 
-    public Vaca(String nombre, LocalDate fechaNacimiento, String razaPadre, String razaMadre, String estado,String descripcion, String numeroIdentificador, Double peso) {
+    public Vaca(String nombre, LocalDate fechaNacimiento, String razaPadre, String razaMadre, String estado,String descripcion, String numeroIdentificador, Double peso, String dueño) {
         this.codigoInterno = "0";
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
@@ -26,7 +27,7 @@ public class Vaca {
         this.descripcion = descripcion;
         this.numeroIdentificador = numeroIdentificador;
         this.peso = peso;
-        
+        this.dueño = dueño;
     }
 
     public String getCodigoInterno() {
@@ -65,6 +66,10 @@ public class Vaca {
         return peso;
     }
 
+    public String getDueño() {
+        return dueño;
+    }
+    
     public void setCodigoInterno(String codigoInterno) {
         this.codigoInterno = codigoInterno;
     }
