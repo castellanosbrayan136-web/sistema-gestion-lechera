@@ -1,0 +1,16 @@
+[
+  {
+    "codigoInterno": "001",
+    "nombre": "Princesa",
+    "fechaNacimiento": {
+      "year": 2016,
+      "month": 6,
+      "day": 4
+    },
+    "razaPadre": "Ayrshire",
+    "razaMadre": "Ayrshire",
+    "estado": "Produciendo",
+    "descripcion": "vaca con manchas negras",
+    "numeroIdentificador": "No se registro numero identificador."
+  }
+]

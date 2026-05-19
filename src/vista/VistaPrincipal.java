@@ -7,6 +7,7 @@ package vista;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JToggleButton;
 
 /**
  *
@@ -43,9 +44,10 @@ public class VistaPrincipal extends javax.swing.JFrame {
         btnSalir = new javax.swing.JButton();
         btnGanado = new javax.swing.JButton();
         btnReportes = new javax.swing.JButton();
+        btnSanidad = new javax.swing.JButton();
         panelHeader = new javax.swing.JPanel();
         lblFecha = new javax.swing.JLabel();
-        lblUsuario = new javax.swing.JLabel();
+        lblUsuario = new javax.swing.JToggleButton();
         panelVacio = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         lblBienvenido = new javax.swing.JLabel();
@@ -154,43 +156,56 @@ public class VistaPrincipal extends javax.swing.JFrame {
         btnReportes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnReportes.setIconTextGap(15);
 
+        btnSanidad.setBackground(new java.awt.Color(39, 51, 69));
+        btnSanidad.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnSanidad.setForeground(new java.awt.Color(255, 255, 255));
+        btnSanidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-vacuna-32.png"))); // NOI18N
+        btnSanidad.setText("Sanidad");
+        btnSanidad.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 14, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnSanidad.setBorderPainted(false);
+        btnSanidad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSanidad.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnSanidad.setIconTextGap(15);
+
         javax.swing.GroupLayout panelSideBarLayout = new javax.swing.GroupLayout(panelSideBar);
         panelSideBar.setLayout(panelSideBarLayout);
         panelSideBarLayout.setHorizontalGroup(
             panelSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnProduccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnFinanzas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblTituloSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(panelSideBarLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(panelLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-            .addComponent(lblTituloSideBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnSanidad, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnFinanzas, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         panelSideBarLayout.setVerticalGroup(
             panelSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelSideBarLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(lblTituloSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(panelLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60)
                 .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(btnGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(btnProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelSideBarLayout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(btnProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnSanidad, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnFinanzas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(170, 170, 170)
+                .addGap(113, 113, 113)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -200,10 +215,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
         lblFecha.setForeground(new java.awt.Color(255, 255, 255));
         lblFecha.setText("Hoy es martes 5 de mayo de 2025");
 
-        lblUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblUsuario.setBackground(new java.awt.Color(97, 120, 148));
+        lblUsuario.setFont(new java.awt.Font("Segoe UI", 0, 21)); // NOI18N
         lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-usuario-30.png"))); // NOI18N
-        lblUsuario.setText(" Brayan C");
+        lblUsuario.setText("Brayan C");
+        lblUsuario.setBorder(null);
+        lblUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblUsuario.setIconTextGap(12);
 
         javax.swing.GroupLayout panelHeaderLayout = new javax.swing.GroupLayout(panelHeader);
         panelHeader.setLayout(panelHeaderLayout);
@@ -212,17 +231,18 @@ public class VistaPrincipal extends javax.swing.JFrame {
             .addGroup(panelHeaderLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(lblFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
-                .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+                .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panelHeaderLayout.setVerticalGroup(
             panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelHeaderLayout.createSequentialGroup()
-                .addGroup(panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lblFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(panelHeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         panelVacio.setBackground(new java.awt.Color(245, 245, 245));
@@ -331,6 +351,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
     public JPanel getBacgraund() {
         return bacgraund;
+    }    
+
+    public JButton getBtnSanidad() {
+        return btnSanidad;
+    }
+
+    public JToggleButton getLblUsuario() {
+        return lblUsuario;
     }
 
     public JButton getBtnClientes() {
@@ -384,11 +412,12 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnProduccion;
     private javax.swing.JButton btnReportes;
     private javax.swing.JButton btnSalir;
+    private javax.swing.JButton btnSanidad;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblBienvenido;
     private javax.swing.JLabel lblFecha;
     private javax.swing.JLabel lblTituloSideBar;
-    private javax.swing.JLabel lblUsuario;
+    private javax.swing.JToggleButton lblUsuario;
     private javax.swing.JPanel panelHeader;
     private javax.swing.JPanel panelLinea;
     private javax.swing.JPanel panelSideBar;

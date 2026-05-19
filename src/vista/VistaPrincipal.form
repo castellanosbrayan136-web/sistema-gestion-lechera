@@ -93,19 +93,19 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnInicio" max="32767" attributes="0"/>
-                  <Component id="btnGanado" max="32767" attributes="0"/>
-                  <Component id="btnProduccion" max="32767" attributes="0"/>
-                  <Component id="btnFinanzas" max="32767" attributes="0"/>
-                  <Component id="btnClientes" max="32767" attributes="0"/>
-                  <Component id="btnReportes" max="32767" attributes="0"/>
-                  <Component id="btnSalir" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="lblTituloSideBar" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                       <Component id="panelLinea" min="-2" pref="200" max="-2" attributes="0"/>
-                      <EmptySpace pref="50" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="lblTituloSideBar" alignment="0" max="32767" attributes="0"/>
+                  <Component id="btnInicio" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="btnProduccion" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="btnGanado" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="btnSanidad" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="btnFinanzas" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="btnClientes" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="btnReportes" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="btnSalir" min="-2" pref="300" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -113,21 +113,25 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                       <Component id="lblTituloSideBar" min="-2" pref="54" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                       <Component id="panelLinea" min="-2" pref="3" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                       <Component id="btnInicio" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="btnGanado" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="btnProduccion" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="57" pref="57" max="-2" attributes="0"/>
+                              <Component id="btnProduccion" min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="btnGanado" min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="btnSanidad" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="btnFinanzas" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="btnClientes" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="btnReportes" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
+                      <EmptySpace min="113" pref="113" max="-2" attributes="0"/>
                       <Component id="btnSalir" min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -365,6 +369,34 @@
                 <Property name="iconTextGap" type="int" value="15"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JButton" name="btnSanidad">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="45" green="33" red="27" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/folder/icons8-vacuna-32.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Sanidad"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                    <MatteColorBorder bottom="1" left="14" right="1" top="1"/>
+                  </Border>
+                </Property>
+                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Mano"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="2"/>
+                <Property name="iconTextGap" type="int" value="15"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="panelHeader">
@@ -380,20 +412,21 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="lblFecha" min="-2" pref="425" max="-2" attributes="0"/>
-                      <EmptySpace pref="224" max="32767" attributes="0"/>
-                      <Component id="lblUsuario" min="-2" pref="190" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="190" max="32767" attributes="0"/>
+                      <Component id="lblUsuario" min="-2" pref="230" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblFecha" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="lblUsuario" alignment="3" max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="lblFecha" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblUsuario" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -410,10 +443,13 @@
                 <Property name="text" type="java.lang.String" value="Hoy es martes 5 de mayo de 2025"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUsuario">
+            <Component class="javax.swing.JToggleButton" name="lblUsuario">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="94" green="78" red="61" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Segoe UI" size="21" style="0"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -421,7 +457,14 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Imagenes/folder/icons8-usuario-30.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value=" Brayan C"/>
+                <Property name="text" type="java.lang.String" value="Brayan C"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="null"/>
+                </Property>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Mano"/>
+                </Property>
+                <Property name="iconTextGap" type="int" value="12"/>
               </Properties>
             </Component>
           </SubComponents>

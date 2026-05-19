@@ -7,17 +7,20 @@ import controlador.ControladorCrearCuenta;
 import controlador.ControladorGanado;
 import controlador.ControladorIniciarSesion;
 import controlador.ControladorPrincipal;
+import controlador.ControladorRegistrarGanado;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import modelo.DepartamentoDAO;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
+import modelo.VacaDAO;
 
 
 public class ScreenManager {
     private static UsuarioDAO usuarioDAO = new UsuarioDAO();
     private static DepartamentoDAO departamentoDAO = new DepartamentoDAO();
+    private static VacaDAO vacaDAO = new VacaDAO();
     
     public static void abrirVistaAutenticacion() {
         VistaAutenticacion vistaAutenticacion = new VistaAutenticacion();
@@ -80,6 +83,8 @@ public class ScreenManager {
     
     public static void cambiarAPanelRegistrarGanado(PanelGanado panelGanado) {
         PanelRegistrarGanado panelRegistrarGanado = new PanelRegistrarGanado();
+        
+        new ControladorRegistrarGanado(panelRegistrarGanado, vacaDAO);
         
         cambiarPaneles(panelGanado.getPanelVacio(), panelRegistrarGanado, 860, 764);
     }

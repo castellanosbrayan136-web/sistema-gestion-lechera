@@ -4,19 +4,16 @@
  */
 package vista;
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
-
 /**
  *
  * @author Brayan C
  */
-public class PanelGanado extends javax.swing.JPanel {
+public class PanelProduccion extends javax.swing.JPanel {
 
     /**
-     * Creates new form panelGanado
+     * Creates new form PanelProduccion
      */
-    public PanelGanado() {
+    public PanelProduccion() {
         initComponents();
     }
 
@@ -31,11 +28,11 @@ public class PanelGanado extends javax.swing.JPanel {
 
         background = new javax.swing.JPanel();
         panelSideBar1 = new javax.swing.JPanel();
-        btnEditarDatos = new javax.swing.JButton();
-        btnRegistrarGanado = new javax.swing.JButton();
-        jblGanado = new javax.swing.JLabel();
+        btnEditarRegistro = new javax.swing.JButton();
+        btnRegistrarProduccion = new javax.swing.JButton();
+        jblProduccion = new javax.swing.JLabel();
         panelLinea = new javax.swing.JPanel();
-        btnListaGanado = new javax.swing.JButton();
+        btnHistorialProduccion = new javax.swing.JButton();
         panelVacio = new javax.swing.JPanel();
 
         background.setBackground(new java.awt.Color(255, 255, 255));
@@ -45,37 +42,37 @@ public class PanelGanado extends javax.swing.JPanel {
         panelSideBar1.setPreferredSize(new java.awt.Dimension(270, 892));
         panelSideBar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnEditarDatos.setBackground(new java.awt.Color(55, 72, 95));
-        btnEditarDatos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnEditarDatos.setForeground(new java.awt.Color(255, 255, 255));
-        btnEditarDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-toro-32.png"))); // NOI18N
-        btnEditarDatos.setText("Editar datos");
-        btnEditarDatos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 14, 1, 1, new java.awt.Color(0, 0, 0)));
-        btnEditarDatos.setBorderPainted(false);
-        btnEditarDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditarDatos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnEditarDatos.setIconTextGap(15);
-        panelSideBar1.add(btnEditarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 250, 60));
+        btnEditarRegistro.setBackground(new java.awt.Color(55, 72, 95));
+        btnEditarRegistro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnEditarRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-toro-32.png"))); // NOI18N
+        btnEditarRegistro.setText("Editar registro");
+        btnEditarRegistro.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnEditarRegistro.setBorderPainted(false);
+        btnEditarRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditarRegistro.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnEditarRegistro.setIconTextGap(15);
+        panelSideBar1.add(btnEditarRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 250, 60));
 
-        btnRegistrarGanado.setBackground(new java.awt.Color(55, 72, 95));
-        btnRegistrarGanado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnRegistrarGanado.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegistrarGanado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganado-32 (1).png"))); // NOI18N
-        btnRegistrarGanado.setText("Registrar ganado");
-        btnRegistrarGanado.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 14, 1, 1, new java.awt.Color(0, 0, 0)));
-        btnRegistrarGanado.setBorderPainted(false);
-        btnRegistrarGanado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnRegistrarGanado.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnRegistrarGanado.setIconTextGap(15);
-        panelSideBar1.add(btnRegistrarGanado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 60));
+        btnRegistrarProduccion.setBackground(new java.awt.Color(55, 72, 95));
+        btnRegistrarProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnRegistrarProduccion.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistrarProduccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganado-32 (1).png"))); // NOI18N
+        btnRegistrarProduccion.setText("Registrar producción");
+        btnRegistrarProduccion.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnRegistrarProduccion.setBorderPainted(false);
+        btnRegistrarProduccion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegistrarProduccion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnRegistrarProduccion.setIconTextGap(15);
+        panelSideBar1.add(btnRegistrarProduccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 60));
 
-        jblGanado.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        jblGanado.setForeground(new java.awt.Color(255, 255, 255));
-        jblGanado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jblGanado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-vaca-70.png"))); // NOI18N
-        jblGanado.setText("Ganado");
-        jblGanado.setIconTextGap(10);
-        panelSideBar1.add(jblGanado, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 48, 200, 54));
+        jblProduccion.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        jblProduccion.setForeground(new java.awt.Color(255, 255, 255));
+        jblProduccion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jblProduccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-registro-32 (1).png"))); // NOI18N
+        jblProduccion.setText("Producción");
+        jblProduccion.setIconTextGap(10);
+        panelSideBar1.add(jblProduccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 48, 200, 54));
 
         panelLinea.setBackground(new java.awt.Color(245, 245, 245));
         panelLinea.setPreferredSize(new java.awt.Dimension(0, 4));
@@ -93,17 +90,17 @@ public class PanelGanado extends javax.swing.JPanel {
 
         panelSideBar1.add(panelLinea, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 120, 200, 3));
 
-        btnListaGanado.setBackground(new java.awt.Color(55, 72, 95));
-        btnListaGanado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnListaGanado.setForeground(new java.awt.Color(255, 255, 255));
-        btnListaGanado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganado-32_1.png"))); // NOI18N
-        btnListaGanado.setText("Lista de ganado");
-        btnListaGanado.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 14, 1, 1, new java.awt.Color(0, 0, 0)));
-        btnListaGanado.setBorderPainted(false);
-        btnListaGanado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnListaGanado.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnListaGanado.setIconTextGap(15);
-        panelSideBar1.add(btnListaGanado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 248, 60));
+        btnHistorialProduccion.setBackground(new java.awt.Color(55, 72, 95));
+        btnHistorialProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnHistorialProduccion.setForeground(new java.awt.Color(255, 255, 255));
+        btnHistorialProduccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganado-32_1.png"))); // NOI18N
+        btnHistorialProduccion.setText("Historial producción");
+        btnHistorialProduccion.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnHistorialProduccion.setBorderPainted(false);
+        btnHistorialProduccion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHistorialProduccion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnHistorialProduccion.setIconTextGap(15);
+        panelSideBar1.add(btnHistorialProduccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 248, 60));
 
         panelVacio.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -111,11 +108,11 @@ public class PanelGanado extends javax.swing.JPanel {
         panelVacio.setLayout(panelVacioLayout);
         panelVacioLayout.setHorizontalGroup(
             panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 860, Short.MAX_VALUE)
+            .addGap(0, 865, Short.MAX_VALUE)
         );
         panelVacioLayout.setVerticalGroup(
             panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 764, Short.MAX_VALUE)
+            .addGap(0, 729, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
@@ -131,7 +128,7 @@ public class PanelGanado extends javax.swing.JPanel {
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(panelSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 759, Short.MAX_VALUE)
+                .addComponent(panelSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
                 .addGap(11, 11, 11))
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -150,23 +147,13 @@ public class PanelGanado extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    public JPanel getPanelVacio() {
-        return panelVacio;
-    }
-    
-    public JButton getBtnRegistrarGanado() {
-        return btnRegistrarGanado;
-    }
-    
-
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
-    private javax.swing.JButton btnEditarDatos;
-    private javax.swing.JButton btnListaGanado;
-    private javax.swing.JButton btnRegistrarGanado;
-    private javax.swing.JLabel jblGanado;
+    private javax.swing.JButton btnEditarRegistro;
+    private javax.swing.JButton btnHistorialProduccion;
+    private javax.swing.JButton btnRegistrarProduccion;
+    private javax.swing.JLabel jblProduccion;
     private javax.swing.JPanel panelLinea;
     private javax.swing.JPanel panelSideBar1;
     private javax.swing.JPanel panelVacio;

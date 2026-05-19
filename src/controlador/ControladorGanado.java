@@ -21,7 +21,6 @@ public class ControladorGanado implements ActionListener {
     
     public void activarBotones() {
         panelGanado.getBtnRegistrarGanado().addActionListener(this);
-        panelGanado.getBtnHistorialSanitario().addActionListener(this);
     }
     
     @Override
@@ -31,9 +30,7 @@ public class ControladorGanado implements ActionListener {
             reiniciarColoresDeBotones();
             panelGanado.getBtnRegistrarGanado().setBackground(botonActivo);
             ScreenManager.cambiarAPanelRegistrarGanado(panelGanado);
-        } else if (e.getSource() == panelGanado.getBtnHistorialSanitario()) {
-            reiniciarColoresDeBotones();
-        }
+        } 
     }
     
     public void reiniciarColoresDeBotones() {

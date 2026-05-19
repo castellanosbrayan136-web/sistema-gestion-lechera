@@ -4,6 +4,10 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Brayan C
@@ -29,7 +33,7 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
         panelRegistrarGanado = new javax.swing.JPanel();
         jblTituloPanel = new javax.swing.JLabel();
         jblFechaNacimiento = new javax.swing.JLabel();
-        jcbX = new javax.swing.JLabel();
+        jblX = new javax.swing.JLabel();
         jblRazasConforman = new javax.swing.JLabel();
         jblMensajeNombre = new javax.swing.JLabel();
         jblMensajeFecha = new javax.swing.JLabel();
@@ -54,7 +58,7 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
         txtDescripcion = new javax.swing.JTextField();
         jblRazasConforman1 = new javax.swing.JLabel();
 
-        panelRegistrarGanado.setBackground(new java.awt.Color(255, 255, 255));
+        panelRegistrarGanado.setBackground(new java.awt.Color(245, 245, 245));
 
         jblTituloPanel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jblTituloPanel.setForeground(new java.awt.Color(0, 0, 0));
@@ -65,10 +69,10 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
         jblFechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
         jblFechaNacimiento.setText("Fecha de nacimiento");
 
-        jcbX.setBackground(new java.awt.Color(255, 255, 255));
-        jcbX.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jcbX.setForeground(new java.awt.Color(0, 0, 0));
-        jcbX.setText("X");
+        jblX.setBackground(new java.awt.Color(255, 255, 255));
+        jblX.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jblX.setForeground(new java.awt.Color(0, 0, 0));
+        jblX.setText("X");
 
         jblRazasConforman.setBackground(new java.awt.Color(0, 0, 0));
         jblRazasConforman.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -119,10 +123,14 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
         jcbRazaMadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jcbRazaMadre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Raza madre" }));
         jcbRazaMadre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jcbRazaMadre.setMaximumSize(new java.awt.Dimension(138, 50));
+        jcbRazaMadre.setMinimumSize(new java.awt.Dimension(137, 49));
 
         jcbRazaPadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jcbRazaPadre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Raza padre" }));
         jcbRazaPadre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jcbRazaPadre.setMaximumSize(new java.awt.Dimension(138, 50));
+        jcbRazaPadre.setMinimumSize(new java.awt.Dimension(137, 49));
 
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btnRegistrar.setText("REGISTRAR");
@@ -170,12 +178,17 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jblTituloPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(362, 362, 362))
                     .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
                         .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblDatosObligatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jblDatosObligatorios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(59, 59, 59))
+                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 135, Short.MAX_VALUE)))
                         .addGap(177, 177, 177)
                         .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtNumeroIdentificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -193,22 +206,27 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
                                 .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jblMensajeNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jblFechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                                .addComponent(jcbRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(9, 9, 9)
-                                .addComponent(jcbX, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jblMensajeNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(10, 10, 10))
+                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                .addComponent(jblFechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(26, 26, 26))
+                            .addComponent(jblRazasConforman, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                .addComponent(jcbRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jcbRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jblRazasConforman, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(172, 172, 172)
+                                .addComponent(jblX, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jcbRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(163, 163, 163)
                         .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4))
                     .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(53, 53, 53))
         );
@@ -245,10 +263,10 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
                         .addComponent(jblRazasConforman)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jcbRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcbRazaPadre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jcbRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jcbX, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jblX, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jblMensajeRazas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -275,9 +293,7 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+            .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -293,6 +309,96 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDescripcionActionPerformed
 
+    public JComboBox<String> getJcbAño() {
+        return jcbAño;
+    }
+
+    public JComboBox<String> getJcbDia() {
+        return jcbDia;
+    }
+
+    public JComboBox<String> getJcbEstado() {
+        return jcbEstado;
+    }
+
+    public JComboBox<String> getJcbMes() {
+        return jcbMes;
+    }
+
+    public JComboBox<String> getJcbRazaMadre() {
+        return jcbRazaMadre;
+    }
+
+    public JComboBox<String> getJcbRazaPadre() {
+        jcbRazaPadre.setSize(138,50);
+        return jcbRazaPadre;
+    }
+
+    public String getDescripcion() {
+        String descripcion = txtDescripcion.getText();
+        
+        if (validarCampos(descripcion)) {
+            return descripcion;
+        }
+        return null;
+    }
+
+    public String getNombre() {
+        String nombre = txtNombre.getText();
+        
+        if (validarCampos(nombre)) {
+            return nombre;
+        }
+        return null;
+    }
+
+    public String getNumeroIdentificacion() {
+        String numeroIdentificacion = txtNumeroIdentificacion.getText();
+        
+        if (validarCampos(numeroIdentificacion)) {
+            return numeroIdentificacion;
+        }
+        return null;
+    }
+
+    public Double getPeso() {
+        String peso = txtPeso.getText();
+        
+        if (validarCampos(peso)) {
+            return Double.valueOf(peso);
+        }
+        return null;
+    }
+    
+    public boolean validarCampos(String texto) {
+        return (texto != null && !texto.trim().isEmpty());
+    }
+
+    public JTextField getTxtDescripcion() {
+        return txtDescripcion;
+    }
+
+    public JTextField getTxtNombre() {
+        return txtNombre;
+    }
+
+    public JTextField getTxtNumeroIdentificacion() {
+        return txtNumeroIdentificacion;
+    }
+
+    public JTextField getTxtPeso() {
+        return txtPeso;
+    }
+
+    public JButton getBtnRegistrar() {
+        return btnRegistrar;
+    }
+    
+    
+    
+    
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegistrar;
@@ -310,13 +416,13 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
     private javax.swing.JLabel jblRazasConforman;
     private javax.swing.JLabel jblRazasConforman1;
     private javax.swing.JLabel jblTituloPanel;
+    private javax.swing.JLabel jblX;
     private javax.swing.JComboBox<String> jcbAño;
     private javax.swing.JComboBox<String> jcbDia;
     private javax.swing.JComboBox<String> jcbEstado;
     private javax.swing.JComboBox<String> jcbMes;
     private javax.swing.JComboBox<String> jcbRazaMadre;
     private javax.swing.JComboBox<String> jcbRazaPadre;
-    private javax.swing.JLabel jcbX;
     private javax.swing.JPanel panelRegistrarGanado;
     private javax.swing.JTextField txtDescripcion;
     private javax.swing.JTextField txtNombre;

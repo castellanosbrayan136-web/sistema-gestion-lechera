@@ -95,9 +95,9 @@
                           <Component id="mensajeNombreDeLaFinca" min="-2" pref="540" max="-2" attributes="0"/>
                           <Component id="jblUbicacion" min="-2" pref="542" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jcbDepartamento" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jcbMunicipio" pref="175" max="32767" attributes="0"/>
+                              <Component id="jcbDepartamento" min="-2" pref="165" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jcbMunicipio" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="txtVereda" min="-2" pref="166" max="-2" attributes="0"/>
                           </Group>

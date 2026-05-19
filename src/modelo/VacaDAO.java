@@ -20,11 +20,15 @@ public class VacaDAO {
     private final Gson gson;
     private final String ruta;
     private final List<Vaca> listaVacas;
+    private List<String> listaRazas;
+    private String rutaRazas;
 
     public VacaDAO() {
         this.gson = new GsonBuilder().setPrettyPrinting().create();
         this.ruta = "ganado.json";
         this.listaVacas = cargarDatos();
+        this.rutaRazas = "razas.json";
+        this.listaRazas = cargarListadoDeRazas();
     }
     
     private void guardarDatos() {
@@ -48,6 +52,19 @@ public class VacaDAO {
             
             return (lista != null) ? lista : new ArrayList<>();
         } catch (IOException ex) {
+            return new ArrayList<>();
+        }
+    }
+    
+    public List<String> cargarListadoDeRazas() {
+        File archivo = new File(rutaRazas);
+        
+        try (Reader lector = new FileReader(archivo)) {
+            Type tipo = new TypeToken<List<String>>(){}.getType();
+            List<String> lista = gson.fromJson(lector, tipo);
+            return lista;
+        } catch (IOException ex) {
+            System.err.println("Error al cargar listado de razas: " + ex.getMessage());
             return new ArrayList<>();
         }
     }
@@ -78,5 +95,9 @@ public class VacaDAO {
     
     public List<Vaca> retornarListaVacas() {
         return listaVacas;
+    }
+    
+    public List<String> retornarListadoDeRazas() {
+        return listaRazas;
     }
 }

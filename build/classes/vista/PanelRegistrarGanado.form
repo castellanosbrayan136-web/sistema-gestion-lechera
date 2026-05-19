@@ -16,10 +16,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="panelRegistrarGanado" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
-          </Group>
+          <Component id="panelRegistrarGanado" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -32,7 +29,7 @@
     <Container class="javax.swing.JPanel" name="panelRegistrarGanado">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+          <Color blue="f5" green="f5" red="f5" type="rgb"/>
         </Property>
       </Properties>
 
@@ -42,14 +39,21 @@
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="jblTituloPanel" min="-2" pref="441" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                          <Component id="jblTituloPanel" max="32767" attributes="0"/>
+                          <EmptySpace min="362" pref="362" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jblDatosObligatorios" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="txtNombre" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="jLabel1" alignment="0" min="-2" pref="257" max="-2" attributes="0"/>
+                              <Component id="jblDatosObligatorios" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel1" max="32767" attributes="0"/>
+                                  <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="txtNombre" min="-2" pref="323" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="135" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -71,25 +75,32 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jcbDia" min="-2" pref="98" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jblMensajeNombre" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="jblMensajeFecha" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="jblFechaNacimiento" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jcbRazaMadre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Component id="jcbX" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jcbRazaPadre" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jblMensajeNombre" max="32767" attributes="0"/>
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jblFechaNacimiento" max="32767" attributes="0"/>
+                                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jblRazasConforman" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="jblMensajeFecha" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jcbRazaMadre" min="-2" pref="146" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jblX" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jcbRazaPadre" min="-2" pref="148" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txtDescripcion" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
                               <Component id="txtPeso" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="0" min="-2" pref="251" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="0" min="-2" pref="251" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                       </Group>
                       <Component id="btnRegistrar" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                   </Group>
@@ -134,10 +145,10 @@
                           <Component id="jblRazasConforman" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jcbRazaPadre" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="jcbRazaPadre" alignment="0" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="jcbRazaMadre" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jcbX" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="jblX" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -193,7 +204,7 @@
             <Property name="text" type="java.lang.String" value="Fecha de nacimiento"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jcbX">
+        <Component class="javax.swing.JLabel" name="jblX">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -377,6 +388,12 @@
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor de Mano"/>
             </Property>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[138, 50]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[137, 49]"/>
+            </Property>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -394,6 +411,12 @@
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor de Mano"/>
+            </Property>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[138, 50]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[137, 49]"/>
             </Property>
           </Properties>
           <AuxValues>
