@@ -47,6 +47,7 @@ public class ControladorPrincipal implements ActionListener {
     public void activarBotones() {
         vistaPrincipal.getBtnInicio().addActionListener(this);
         vistaPrincipal.getBtnGanado().addActionListener(this);
+        vistaPrincipal.getBtnSanidad().addActionListener(this);
         vistaPrincipal.getBtnProduccion().addActionListener(this);
         vistaPrincipal.getBtnClientes().addActionListener(this);
         vistaPrincipal.getBtnFinanzas().addActionListener(this);
@@ -66,7 +67,11 @@ public class ControladorPrincipal implements ActionListener {
             reiniciarColorDeBoton();
             vistaPrincipal.getBtnGanado().setBackground(botonActivo);
             ScreenManager.cambiarAPanelGanado(vistaPrincipal, usuario);
-        } else if (e.getSource() == vistaPrincipal.getBtnProduccion()) {
+        }else if (e.getSource() == vistaPrincipal.getBtnSanidad()) {
+            reiniciarColorDeBoton();
+            vistaPrincipal.getBtnSanidad().setBackground(botonActivo);
+            ScreenManager.cambiarAPanelSanidad(vistaPrincipal, usuario);
+        }else if (e.getSource() == vistaPrincipal.getBtnProduccion()) {
             JOptionPane.showMessageDialog(vistaPrincipal, mensajeVersion);
         } else if (e.getSource() == vistaPrincipal.getBtnFinanzas()) {
             JOptionPane.showMessageDialog(vistaPrincipal, mensajeVersion);
@@ -76,13 +81,14 @@ public class ControladorPrincipal implements ActionListener {
             JOptionPane.showMessageDialog(vistaPrincipal, mensajeVersion);
         } else if (e.getSource() == vistaPrincipal.getBtnSalir()) {
             System.exit(0);
-        }
+        } 
     }
     
     public void reiniciarColorDeBoton() {
         Color azulGris = new Color(39, 51, 69);
         vistaPrincipal.getBtnInicio().setBackground(azulGris);
         vistaPrincipal.getBtnGanado().setBackground(azulGris);
+        vistaPrincipal.getBtnSanidad().setBackground(azulGris);
     }
     
     public void cargarInformacionDeInicio() {

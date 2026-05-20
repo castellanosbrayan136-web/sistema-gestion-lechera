@@ -3,6 +3,8 @@ package modelo;
 //@autor: Brayan C
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Vaca {
@@ -16,8 +18,10 @@ public class Vaca {
     private String numeroIdentificador;
     private Double peso;
     private String dueño;
+    private List<TratamientoVeterinario> historialTratamientos;
 
     public Vaca(String nombre, LocalDate fechaNacimiento, String razaPadre, String razaMadre, String estado,String descripcion, String numeroIdentificador, Double peso, String dueño) {
+        this.historialTratamientos = new ArrayList<>();
         this.codigoInterno = "0";
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
@@ -69,8 +73,25 @@ public class Vaca {
     public String getDueño() {
         return dueño;
     }
+
+    public List<TratamientoVeterinario> getHistorialTratamientos() {
+        return historialTratamientos;
+    }
     
     public void setCodigoInterno(String codigoInterno) {
         this.codigoInterno = codigoInterno;
     }
+
+    public void setHistorialTratamientos(TratamientoVeterinario tratamiento) {
+        this.historialTratamientos.add(tratamiento);
+    }
+    
+    
+
+    @Override
+    public String toString() {
+        return codigoInterno + " - " + nombre;
+    }
+    
+    
 }

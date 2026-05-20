@@ -4,6 +4,9 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Brayan C
@@ -138,7 +141,19 @@ public class PanelSanidad extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public JButton getBtnHistorialSanitario() {
+        return btnHistorialSanitario;
+    }
 
+    public JButton getBtnRegistrarTratamiento() {
+        return btnRegistrarTratamiento;
+    }
+
+    public JPanel getPanelVacio() {
+        return panelVacio;
+    }
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JButton btnHistorialSanitario;

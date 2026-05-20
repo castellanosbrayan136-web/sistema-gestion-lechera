@@ -68,8 +68,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="txtFiltroPorNombre" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="550" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="532" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -88,7 +88,7 @@
                   <Table columnCount="5" rowCount="0">
                     <Column editable="true" title="Codigo" type="java.lang.String"/>
                     <Column editable="true" title="Nombre" type="java.lang.Integer"/>
-                    <Column editable="true" title="Edad" type="java.lang.String"/>
+                    <Column editable="true" title="Edad(a&#xf1;os)" type="java.lang.String"/>
                     <Column editable="true" title="Raza" type="java.lang.String"/>
                     <Column editable="true" title="Estado" type="java.lang.Object"/>
                   </Table>

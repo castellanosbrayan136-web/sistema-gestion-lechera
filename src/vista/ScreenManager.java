@@ -9,6 +9,8 @@ import controlador.ControladorIniciarSesion;
 import controlador.ControladorListaGanado;
 import controlador.ControladorPrincipal;
 import controlador.ControladorRegistrarGanado;
+import controlador.ControladorRegistrarTratamiento;
+import controlador.ControladorSanidad;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -98,6 +100,22 @@ public class ScreenManager {
         cambiarPaneles(panelGanado.getPanelVacio(), panelListaGanado, 860, 764);
     }
     
+    public static void cambiarAPanelSanidad(VistaPrincipal vistaPrincipal, Usuario usuario) {
+        PanelSanidad panelSanidad = new PanelSanidad();
+        
+        new ControladorSanidad(panelSanidad, usuario);
+        
+        cambiarPaneles(vistaPrincipal.getPanelVacio(), panelSanidad, 1128, 778);
+    }
+    
+    public static void cambiarAPanelRegistrarTratamiento(PanelSanidad panelSanidad, Usuario usuario) {
+        PanelRegistrarTratamiento panelRegistrarTratamiento = new PanelRegistrarTratamiento();
+        
+        new ControladorRegistrarTratamiento(panelRegistrarTratamiento, vacaDAO, usuario);
+        
+        cambiarPaneles(panelSanidad.getPanelVacio(), panelRegistrarTratamiento, 860, 764);
+    }
+    
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {
         panelAIntercambiar.setSize(ancho,largo);
         panelVacio.removeAll();
@@ -105,4 +123,6 @@ public class ScreenManager {
         panelVacio.revalidate();
         panelVacio.repaint();
     }
+    
+    
 }

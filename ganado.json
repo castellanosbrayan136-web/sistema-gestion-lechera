@@ -3,60 +3,29 @@
     "codigoInterno": "001",
     "nombre": "f",
     "fechaNacimiento": {
-      "year": 2024,
-      "month": 3,
+      "year": 2025,
+      "month": 2,
       "day": 4
     },
     "razaPadre": "Nelore",
-    "razaMadre": "Simmental",
-    "estado": "Produciendo",
-    "descripcion": "No hay descripcion.",
-    "numeroIdentificador": "No se registro numero identificador.",
-    "dueño": "f"
-  },
-  {
-    "codigoInterno": "002",
-    "nombre": "fsadfs",
-    "fechaNacimiento": {
-      "year": 2024,
-      "month": 3,
-      "day": 4
-    },
-    "razaPadre": "Nelore",
-    "razaMadre": "Simmental",
-    "estado": "Produciendo",
-    "descripcion": "No hay descripcion.",
-    "numeroIdentificador": "No se registro numero identificador.",
-    "dueño": "f"
-  },
-  {
-    "codigoInterno": "001",
-    "nombre": "kfkskaf",
-    "fechaNacimiento": {
-      "year": 2024,
-      "month": 4,
-      "day": 4
-    },
-    "razaPadre": "Charolais",
-    "razaMadre": "Nelore",
-    "estado": "Enfermo",
-    "descripcion": "No hay descripcion.",
-    "numeroIdentificador": "No se registro numero identificador.",
-    "dueño": "Brayan C"
-  },
-  {
-    "codigoInterno": "002",
-    "nombre": "hggfdsg",
-    "fechaNacimiento": {
-      "year": 2024,
-      "month": 4,
-      "day": 4
-    },
-    "razaPadre": "Charolais",
-    "razaMadre": "Nelore",
-    "estado": "Produciendo",
-    "descripcion": "No hay descripcion.",
-    "numeroIdentificador": "No se registro numero identificador.",
-    "dueño": "Brayan C"
+    "razaMadre": "Romosinuano",
+    "estado": "Gestación",
+    "descripcion": "ff",
+    "numeroIdentificador": "ff",
+    "peso": 23.0,
+    "dueño": "f",
+    "historialTratamientos": [
+      {
+        "tipo": "VACUNACION",
+        "medicamento": "laaaaa",
+        "dosis": "34 ml",
+        "fecha": {
+          "year": 2025,
+          "month": 2,
+          "day": 2
+        },
+        "observaciones": "ninguna"
+      }
+    ]
   }
 ]

@@ -133,4 +133,15 @@ public class VacaDAO {
         }
         return null;
     }
+    
+    public boolean registrarTratamiento(Vaca vacaTratada,TratamientoVeterinario tratamiento) {
+        for (Vaca vaca : listaVacas) {
+            if (vaca.getCodigoInterno().equals(vacaTratada.getCodigoInterno()) && vaca.getNombre().equals(vacaTratada.getNombre())) {
+                vaca.setHistorialTratamientos(tratamiento);
+                guardarDatos();
+                return true;
+            }
+        }
+        return false;
+    }
 }

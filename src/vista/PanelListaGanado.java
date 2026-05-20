@@ -44,7 +44,7 @@ public class PanelListaGanado extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Codigo", "Nombre", "Edad", "Raza", "Estado"
+                "Codigo", "Nombre", "Edad(años)", "Raza", "Estado"
             }
         ) {
             Class[] types = new Class [] {
@@ -102,8 +102,8 @@ public class PanelListaGanado extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtFiltroPorNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

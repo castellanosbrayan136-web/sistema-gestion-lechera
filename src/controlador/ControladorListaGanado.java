@@ -70,7 +70,7 @@ public class ControladorListaGanado implements KeyListener {
         // Distribucion proporcional columnas
         tabla.getColumnModel().getColumn(0).setPreferredWidth(60);   // Codigo
         tabla.getColumnModel().getColumn(1).setPreferredWidth(180);  // Nombre
-        tabla.getColumnModel().getColumn(2).setPreferredWidth(50);   // Edad
+        tabla.getColumnModel().getColumn(2).setPreferredWidth(70);   // Edad
         tabla.getColumnModel().getColumn(3).setPreferredWidth(260);  // Raza
         tabla.getColumnModel().getColumn(4).setPreferredWidth(140);  // Estado
 
@@ -181,6 +181,13 @@ public class ControladorListaGanado implements KeyListener {
         
         String informacion = "=======INFORMACIÓN==========";
         
+        Double peso = vaca.getPeso();
+        String pesoString = String.valueOf(peso);
+        
+        if (peso == null) {
+            pesoString = "No se registro peso.";
+        }
+        
         informacion += "\nCodigo: " + vaca.getCodigoInterno() + 
                 "\nNombre: " + vaca.getNombre() +
                 "\nFecha de nacimiento: " +
@@ -190,7 +197,7 @@ public class ControladorListaGanado implements KeyListener {
                 "\nRaza: " + vaca.getRazaMadre() + " x " + vaca.getRazaPadre() + 
                 "\nEstado: " + vaca.getEstado() +
                 "\nNumero de indentificacion: " + vaca.getNumeroIdentificador() +
-                "\nPeso: " + vaca.getPeso() +
+                "\nPeso(Kg): " + pesoString +
                 "\nDescripcion: " + vaca.getDescripcion();
         return informacion;
         
@@ -203,7 +210,6 @@ public class ControladorListaGanado implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-            configurarTabla();
             filtrarTablaPorNombreVaca();
         }
     }
