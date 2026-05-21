@@ -27,5 +27,34 @@
         "observaciones": "ninguna"
       }
     ]
+  },
+  {
+    "codigoInterno": "002",
+    "nombre": "Lola",
+    "fechaNacimiento": {
+      "year": 2020,
+      "month": 5,
+      "day": 7
+    },
+    "razaPadre": "Ayrshire",
+    "razaMadre": "Ayrshire",
+    "estado": "Produciendo",
+    "descripcion": "Vaca negra con manchas blancas",
+    "numeroIdentificador": "675",
+    "peso": 150.0,
+    "dueño": "f",
+    "historialTratamientos": [
+      {
+        "tipo": "INSEMINACION",
+        "medicamento": "Ninguno",
+        "dosis": "1 Pajilla",
+        "fecha": {
+          "year": 2025,
+          "month": 1,
+          "day": 2
+        },
+        "observaciones": "Ninguna"
+      }
+    ]
   }
 ]

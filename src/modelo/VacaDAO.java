@@ -144,4 +144,16 @@ public class VacaDAO {
         }
         return false;
     }
+    
+    public boolean editarGanado(Vaca vaca) {
+        if (vaca != null) {
+            for (int i = 0; i > listaVacas.size();i++) {
+                if (listaVacas.get(i).getCodigoInterno().equals(vaca.getCodigoInterno()) && listaVacas.get(i).getDueño().equals(vaca.getDueño())) {
+                    listaVacas.set(i, vaca);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
