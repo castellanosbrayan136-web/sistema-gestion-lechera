@@ -1,7 +1,7 @@
 [
   {
     "codigoInterno": "001",
-    "nombre": "f",
+    "nombre": "Julieta",
     "fechaNacimiento": {
       "year": 2025,
       "month": 2,
@@ -9,24 +9,12 @@
     },
     "razaPadre": "Nelore",
     "razaMadre": "Romosinuano",
-    "estado": "Gestación",
-    "descripcion": "ff",
-    "numeroIdentificador": "ff",
+    "estado": "Produciendo",
+    "descripcion": "Gran productora\nVaca de buena calidad\nVaca de color rojo\nTiene lineas pardas\nsiu",
+    "numeroIdentificador": "#7453",
     "peso": 23.0,
     "dueño": "f",
-    "historialTratamientos": [
-      {
-        "tipo": "VACUNACION",
-        "medicamento": "laaaaa",
-        "dosis": "34 ml",
-        "fecha": {
-          "year": 2025,
-          "month": 2,
-          "day": 2
-        },
-        "observaciones": "ninguna"
-      }
-    ]
+    "historialTratamientos": []
   },
   {
     "codigoInterno": "002",

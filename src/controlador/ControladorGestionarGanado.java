@@ -21,18 +21,22 @@ import javax.swing.table.JTableHeader;
 import modelo.Usuario;
 import modelo.Vaca;
 import modelo.VacaDAO;
-import vista.PanelListaGanado;
+import vista.PanelGestionarGanado;
+import vista.ScreenManager;
+import vista.VistaPrincipal;
 
 
-public class ControladorListaGanado implements KeyListener {
-    private PanelListaGanado panelListaGanado;
+public class ControladorGestionarGanado implements KeyListener, ActionListener {
+    private PanelGestionarGanado panelListaGanado;
+    private VistaPrincipal vistaPrincipal;
     private VacaDAO vacaDAO;
     private Usuario usuario;
 
-    public ControladorListaGanado(PanelListaGanado panelListaGanado, VacaDAO vacaDAO, Usuario usuario) {
+    public ControladorGestionarGanado(PanelGestionarGanado panelListaGanado, VacaDAO vacaDAO, Usuario usuario, VistaPrincipal vistaPrincipal) {
         this.panelListaGanado = panelListaGanado;
         this.vacaDAO = vacaDAO;
         this.usuario = usuario;
+        this.vistaPrincipal = vistaPrincipal;
         configurarTabla();
         llenarTabla();
         activarEventos();
@@ -40,7 +44,9 @@ public class ControladorListaGanado implements KeyListener {
     
     public void activarEventos() {
         panelListaGanado.getTxtFiltroPorNombre().addKeyListener(this);
-        eventoTabla();
+        panelListaGanado.getBtnBuscar().addActionListener(this);
+        panelListaGanado.getBtnEditar().addActionListener(this);
+        panelListaGanado.getBtnVerInformacion().addActionListener(this);
     }
     
     public void configurarTabla() {
@@ -151,34 +157,32 @@ public class ControladorListaGanado implements KeyListener {
         }
     }
     
-    public void eventoTabla() {
-        panelListaGanado.getTablaGanado().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                if (e.getClickCount() == 1) {
-                    mostrarInformacion();
-                }
-            }
-        });
-    }
-    
     public void mostrarInformacion() {
         JOptionPane.showMessageDialog(null, llenarInformacion());
     }
     
-    public String llenarInformacion() {
+    public Vaca retornarVacaSeleccionada() {
         DefaultTableModel modeloTabla = (DefaultTableModel) panelListaGanado.getTablaGanado().getModel();
         
         int row = panelListaGanado.getTablaGanado().getSelectedRow();
         
         if (row == -1) {
-            return "No hay fila seleccionada";
+            return null;
         }
         
         String codigoVaca = modeloTabla.getValueAt(row, 0).toString();
         
-        Vaca vaca = vacaDAO.buscarVacaPorCodigo(codigoVaca);
+        return vacaDAO.buscarVacaPorCodigoYpropietario(codigoVaca, usuario.getNombreDeUsuario());
         
+    }
+    
+    public String llenarInformacion() {
+        Vaca vaca = retornarVacaSeleccionada();
+        
+        if (vaca == null) {
+            return "No hay fila seleccionada";
+        }
+
         String informacion = "=======INFORMACIÓN==========";
         
         Double peso = vaca.getPeso();
@@ -202,6 +206,18 @@ public class ControladorListaGanado implements KeyListener {
         return informacion;
         
     }
+    
+    public void editarGanado() {
+        Vaca vaca = retornarVacaSeleccionada();
+        
+        if (vaca == null) {
+            JOptionPane.showMessageDialog(panelListaGanado, "Selecciona una fila.");
+            return;
+        }
+        
+        ScreenManager.abrirDialogEdicionGanado(vistaPrincipal, vaca);
+        llenarTabla();
+    }
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -216,5 +232,16 @@ public class ControladorListaGanado implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == panelListaGanado.getBtnBuscar()) {
+            filtrarTablaPorNombreVaca();
+        } else if (e.getSource() == panelListaGanado.getBtnVerInformacion()) {
+            mostrarInformacion();
+        } else if (e.getSource() == panelListaGanado.getBtnEditar()) {
+            editarGanado();
+        }
     }
 }

@@ -31,7 +31,6 @@ public class PanelGanado extends javax.swing.JPanel {
 
         background = new javax.swing.JPanel();
         panelSideBar1 = new javax.swing.JPanel();
-        btnEditarDatos = new javax.swing.JButton();
         btnRegistrarGanado = new javax.swing.JButton();
         jblGanado = new javax.swing.JLabel();
         panelLinea = new javax.swing.JPanel();
@@ -44,18 +43,6 @@ public class PanelGanado extends javax.swing.JPanel {
         panelSideBar1.setForeground(new java.awt.Color(46, 125, 50));
         panelSideBar1.setPreferredSize(new java.awt.Dimension(270, 892));
         panelSideBar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnEditarDatos.setBackground(new java.awt.Color(55, 72, 95));
-        btnEditarDatos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnEditarDatos.setForeground(new java.awt.Color(255, 255, 255));
-        btnEditarDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-toro-32.png"))); // NOI18N
-        btnEditarDatos.setText("Editar datos");
-        btnEditarDatos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 14, 1, 1, new java.awt.Color(0, 0, 0)));
-        btnEditarDatos.setBorderPainted(false);
-        btnEditarDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditarDatos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnEditarDatos.setIconTextGap(15);
-        panelSideBar1.add(btnEditarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 250, 60));
 
         btnRegistrarGanado.setBackground(new java.awt.Color(55, 72, 95));
         btnRegistrarGanado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -97,7 +84,7 @@ public class PanelGanado extends javax.swing.JPanel {
         btnListaGanado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnListaGanado.setForeground(new java.awt.Color(255, 255, 255));
         btnListaGanado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganado-32_1.png"))); // NOI18N
-        btnListaGanado.setText("Lista de ganado");
+        btnListaGanado.setText("Gestionar ganado");
         btnListaGanado.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 14, 1, 1, new java.awt.Color(0, 0, 0)));
         btnListaGanado.setBorderPainted(false);
         btnListaGanado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -158,10 +145,6 @@ public class PanelGanado extends javax.swing.JPanel {
         return btnRegistrarGanado;
     }
 
-    public JButton getBtnEditarDatos() {
-        return btnEditarDatos;
-    }
-
     public JButton getBtnListaGanado() {
         return btnListaGanado;
     }
@@ -172,7 +155,6 @@ public class PanelGanado extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
-    private javax.swing.JButton btnEditarDatos;
     private javax.swing.JButton btnListaGanado;
     private javax.swing.JButton btnRegistrarGanado;
     private javax.swing.JLabel jblGanado;

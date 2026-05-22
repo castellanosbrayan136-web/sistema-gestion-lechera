@@ -86,12 +86,13 @@ public class ControdalorEdicionGanado implements ActionListener {
     }
     
     public Vaca leerDatosNuevos() {
-        return new Vaca(dialogEdicionGanado.getNombre(), vaca.getFechaNacimiento(), dialogEdicionGanado.getJcbRazaPadre().getSelectedItem().toString(), dialogEdicionGanado.getJcbRazaMadre().getSelectedItem().toString(), dialogEdicionGanado.getJcbEstado().getSelectedItem().toString(), dialogEdicionGanado.getDescripcion(), dialogEdicionGanado.getNumeroIdentificador(), Double.valueOf(dialogEdicionGanado.getPeso()), vaca.getDueño());
+        return new Vaca(vaca.getCodigoInterno(),dialogEdicionGanado.getNombre(), vaca.getFechaNacimiento(), dialogEdicionGanado.getJcbRazaPadre().getSelectedItem().toString(), dialogEdicionGanado.getJcbRazaMadre().getSelectedItem().toString(), dialogEdicionGanado.getJcbEstado().getSelectedItem().toString(), dialogEdicionGanado.getDescripcion(), dialogEdicionGanado.getNumeroIdentificador(), Double.valueOf(dialogEdicionGanado.getPeso()), vaca.getDueño());
     }
     
     public void editarDatos() {
         if (vacaDAO.editarGanado(leerDatosNuevos())) {
             JOptionPane.showMessageDialog(vistaPrincipal, "Se ha editado correctamente.");
+            dialogEdicionGanado.dispose();
         } else {
             JOptionPane.showMessageDialog(vistaPrincipal, "Error, completa los datos.");
         }

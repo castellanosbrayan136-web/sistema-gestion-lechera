@@ -8,15 +8,18 @@ import java.awt.event.ActionListener;
 import modelo.Usuario;
 import vista.PanelGanado;
 import vista.ScreenManager;
+import vista.VistaPrincipal;
 
 
 public class ControladorGanado implements ActionListener {
     private PanelGanado panelGanado;
     private Usuario usuario;
+    private VistaPrincipal vistaPrincipal;
 
-    public ControladorGanado(PanelGanado panelGanado, Usuario usuario) {
+    public ControladorGanado(PanelGanado panelGanado, Usuario usuario, VistaPrincipal vistaPrincipal) {
         this.panelGanado = panelGanado;
         this.usuario = usuario;
+        this.vistaPrincipal = vistaPrincipal;
         activarBotones();
         ScreenManager.cambiarAPanelRegistrarGanado(panelGanado, usuario);
         panelGanado.getBtnRegistrarGanado().setBackground(new Color(93, 122, 163));
@@ -37,7 +40,7 @@ public class ControladorGanado implements ActionListener {
         } else if (e.getSource() == panelGanado.getBtnListaGanado()) {
             reiniciarColoresDeBotones();
             panelGanado.getBtnListaGanado().setBackground(botonActivo);
-            ScreenManager.cambiarAPanelListaGanado(panelGanado, usuario);
+            ScreenManager.cambiarAPanelListaGanado(panelGanado, usuario, vistaPrincipal);
         }
     }
     

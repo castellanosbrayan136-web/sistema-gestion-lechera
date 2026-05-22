@@ -125,9 +125,9 @@ public class VacaDAO {
         return listaFiltrada;
     }
     
-    public Vaca buscarVacaPorCodigo(String codigo) {
+    public Vaca buscarVacaPorCodigoYpropietario(String codigo, String nombrePropietario) {
         for (Vaca vaca : listaVacas) {
-            if (vaca.getCodigoInterno().equals(codigo)) {
+            if (vaca.getCodigoInterno().equals(codigo) && vaca.getDueño().equals(nombrePropietario)) {
                 return vaca;
             }
         }
@@ -147,9 +147,10 @@ public class VacaDAO {
     
     public boolean editarGanado(Vaca vaca) {
         if (vaca != null) {
-            for (int i = 0; i > listaVacas.size();i++) {
+            for (int i = 0; i < listaVacas.size();i++) {
                 if (listaVacas.get(i).getCodigoInterno().equals(vaca.getCodigoInterno()) && listaVacas.get(i).getDueño().equals(vaca.getDueño())) {
                     listaVacas.set(i, vaca);
+                    guardarDatos();
                     return true;
                 }
             }

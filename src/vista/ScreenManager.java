@@ -6,7 +6,7 @@ import controlador.ControladorAutenticacion;
 import controlador.ControladorCrearCuenta;
 import controlador.ControladorGanado;
 import controlador.ControladorIniciarSesion;
-import controlador.ControladorListaGanado;
+import controlador.ControladorGestionarGanado;
 import controlador.ControladorPrincipal;
 import controlador.ControladorRegistrarGanado;
 import controlador.ControladorRegistrarTratamiento;
@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import modelo.DepartamentoDAO;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
+import modelo.Vaca;
 import modelo.VacaDAO;
 
 
@@ -79,7 +80,7 @@ public class ScreenManager {
     public static void cambiarAPanelGanado(VistaPrincipal vistaPrincipal, Usuario usuario) {
         PanelGanado panelGanado = new PanelGanado();
         
-        new ControladorGanado(panelGanado, usuario);
+        new ControladorGanado(panelGanado, usuario, vistaPrincipal);
         
         cambiarPaneles(vistaPrincipal.getPanelVacio(), panelGanado, 1128, 778);
     }
@@ -92,10 +93,10 @@ public class ScreenManager {
         cambiarPaneles(panelGanado.getPanelVacio(), panelRegistrarGanado, 860, 764);
     }
     
-    public static void cambiarAPanelListaGanado(PanelGanado panelGanado, Usuario usuario) {
-        PanelListaGanado panelListaGanado = new PanelListaGanado();
+    public static void cambiarAPanelListaGanado(PanelGanado panelGanado, Usuario usuario, VistaPrincipal vistaPrincipal) {
+        PanelGestionarGanado panelListaGanado = new PanelGestionarGanado();
         
-        new ControladorListaGanado(panelListaGanado, vacaDAO, usuario);
+        new ControladorGestionarGanado(panelListaGanado, vacaDAO, usuario, vistaPrincipal);
         
         cambiarPaneles(panelGanado.getPanelVacio(), panelListaGanado, 860, 764);
     }
@@ -114,6 +115,15 @@ public class ScreenManager {
         new ControladorRegistrarTratamiento(panelRegistrarTratamiento, vacaDAO, usuario);
         
         cambiarPaneles(panelSanidad.getPanelVacio(), panelRegistrarTratamiento, 860, 764);
+    }
+    
+    public static void abrirDialogEdicionGanado(VistaPrincipal vistaPrincipal, Vaca vaca) {
+        DialogEdicionGanado dialogEdicionGanado = new DialogEdicionGanado(vistaPrincipal, true);
+        dialogEdicionGanado.setLocationRelativeTo(vistaPrincipal);
+        
+        new controlador.ControdalorEdicionGanado(vistaPrincipal, dialogEdicionGanado, vacaDAO, vaca);
+        
+        dialogEdicionGanado.setVisible(true);
     }
     
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {

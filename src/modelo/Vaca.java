@@ -34,6 +34,14 @@ public class Vaca {
         this.dueño = dueño;
     }
 
+    public Vaca(String codigoInterno,String nombre, LocalDate fechaNacimiento, String razaPadre, String razaMadre, String estado,String descripcion, String numeroIdentificador, Double peso, String dueño) {
+        this(nombre, fechaNacimiento, razaPadre, razaMadre, estado, descripcion, numeroIdentificador, peso, dueño);
+        this.codigoInterno = codigoInterno;
+        
+    }
+    
+    
+
     public String getCodigoInterno() {
         return codigoInterno;
     }
